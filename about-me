@@ -1,0 +1,734 @@
+<!-----------------------------------------------------------------------
+FAQ Page [01]
+Made by glenthemes
+ 
+Initial release: 2019/04/08
+Last updated: 2019/04/13
+ 
+TERMS OF USE:
+1) Do not remove the page credit.
+2) Do not repost/redistribute my themes.
+3) Do not take parts of the code and use it as your own.
+4) Do not use my themes as a base code.
+5) Do not mix my themes together.
+ 
+Please read the guide!
+↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+https://docs.google.com/document/d/1LgHqBkkbW5OrwRq9Edi93KmVDBOkN93IwHBxbfRbwzM
+ 
+Please stick to the terms
+RIP Commander you will be remembered
+------------------------------------------------------------------------>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<head>
+ 
+<title>about me!</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+ 
+<!--------------------JAVASCRIPTS-------------------->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="//static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:0,
+tip_fade_speed:250,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+ 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:200,300,400|Nunito|Open+Sans|Playfair+Display|Source+Code+Pro|El+Messiri" rel="stylesheet">
+ 
+<script src="//static.tumblr.com/gtjt4bo/QRmphdsdv/glenplayer02.js"></script>
+ 
+<script>
+$(document).ready(function(){
+    $('#title-border').width($('#title').width());
+});
+</script>
+ 
+<!-------------------------------------------------------------------->
+ 
+<style type="text/css">
+ 
+@font-face { font-family: "canela"; src: url('https://dl.dropbox.com/s/xlisedq51htaaia/Canela-Regular-Web.ttf'); }
+ 
+/*--------------------TOOLTIPS--------------------*/
+#s-m-t-tooltip {
+    padding:5px 10px;
+    margin:20px;
+    background-color:var(--Tooltip-Background);
+    border:1px solid var(--Tooltip-Border);
+    font-family:canela;
+    font-size:9px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--Tooltip-Text);
+    z-index:99;
+    max-width:40vw;
+}
+ 
+/*--------------------TUMBLR CONTROLS--------------------*/
+iframe#tumblr_controls, .iframe-controls--desktop {
+    top:8px!important;
+    right:8px!important;
+    position:fixed!important;
+    
+    transform:scale(0.8,0.8);
+    -webkit-transform:scale(0.8,0.8);
+    
+    transform-origin:100% 0;
+    z-index:999999!important;
+}
+ 
+/*--------------------SCROLLBAR--------------------*/
+::-webkit-scrollbar {
+    width:13px;
+    height:13px;
+    background-color:var(--Background);
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-top:8px solid var(--Background);
+    border-right:6px solid var(--Background);
+    border-bottom:8px solid var(--Background);
+    border-left:6px solid var(--Background);
+    background-color:var(--Scrollbar-Thumb);
+}
+ 
+::-webkit-scrollbar-track {
+    border-top:8px solid var(--Background);
+    border-right:6px solid var(--Background);
+    border-bottom:8px solid var(--Background);
+    border-left:6px solid var(--Background);
+    background-color:var(--Scrollbar-Track);
+}
+ 
+/*--------------------COLORS--------------------*/
+:root {
+    --Background:#000;
+    
+    --Title:#D4AF37;
+    --Title-Text-Shadow:#000;
+    --Title-Border:#D4AF37;
+    --Q:#D4AF37;
+    --Q-Text-Shadow:#000;
+    --Question-Lines:#000;
+    --Question-Text:#D4AF37;
+    --Question-Text-Shadow:#000;
+    
+    --Answer-Lines:#000;
+    --Answer-Text:#D4AF37;
+    --Answer-Text-Shadow:#000;
+    --A:#D4AF37;
+    --A-Text-Shadow:#000;
+    
+    --Links:#EEE8AA;
+    
+    --Custom-Links:#D4AF37;
+ 
+    --Scrollbar-Track:#393738;
+    --Scrollbar-Thumb:#989395;
+    
+    --Music-Player:#BEB8BB;
+    
+    --Tooltip-Background:#000;
+    --Tooltip-Border:#8F8A8C;
+    --Tooltip-Text:#BEB8BB;
+}
+ 
+/*--------------------BASICS--------------------*/
+body {
+    background:#10121F url('https://www.tropicdrawing.com/wp-content/uploads/2019/09/watercolor-53.jpg');
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    color:#888;
+    cursor:normal;
+    font-family:inconsolata;
+    line-height:1.6em;
+    font-size:12px;
+    text-align:left;
+}
+ 
+blockquote {
+    padding-left:10px;
+    margin-left:5px;
+    border-left:1px solid;
+    border-color:#aaa;
+    margin:10px;
+}
+ 
+a {
+    color:var(--Links);
+    text-decoration:none;
+}
+ 
+a, .sq {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+ 
+b, strong {
+    font-weight:bold;
+}
+ 
+i, em {color:;}
+ 
+pre, code {
+    white-space:pre-wrap;
+    display:block;
+}
+ 
+p:last-child {margin-bottom:0px;}
+ 
+/*--------------------CONTAINER--------------------*/
+#cont-h-1 {
+    position:absolute;
+    top:0;left:0;right:0;
+    margin:0 auto;
+    height:100vh;
+    text-align:center;
+}
+ 
+#cont-h-2 {display:inline-block;}
+ 
+#box {margin-top:14vh;}
+ 
+ 
+/*-----TITLE-----*/
+#title:before {content:".:"}
+#title:after {content:":."}
+#title:before, #title:after {margin:20px;}
+ 
+#title {
+    display:inline-block;
+    font-family:canela;
+    font-size:21px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    color:var(--Title);
+    text-shadow:1px 1px 1px var(--Title-Text-Shadow);
+}
+ 
+#title-border {
+    margin:24px auto auto auto;
+    height:1px;
+    background:-webkit-linear-gradient(left, transparent 0%, var(--Title-Border) 50%, transparent 100%);
+}
+ 
+/*-----Q&A MAIN CONTAINER-----*/
+#contwrap {
+    padding-top:8px;
+    margin-bottom:14vh;
+    width:650px;
+}
+ 
+#contwrap > .one-question {
+    max-width:calc((650px / 2) + 70px);
+}
+ 
+#contwrap > .one-answer {
+    width:calc((650px / 2) + 70px);
+}
+ 
+/*-----QUESTION STYLING-----*/
+.one-question {
+    margin-top:30px;
+    display:flex;
+}
+ 
+.q-marker {
+    margin-top:12px;
+    font-family:canela;
+    text-transform:uppercase;
+    font-size:22px;
+    letter-spacing:5px;
+    color:var(--Q);
+    text-shadow:1px 1px 1px var(--Q-Text-Shadow);
+}
+ 
+.line-beef {
+    margin-top:22px;
+    margin-left:14px;
+    width:18px;
+    height:2px;
+    background:var(--Question-Lines);
+}
+ 
+.q-wrap {display:table;}
+ 
+.cherry {
+    width:10px;
+    border-top:2px solid var(--Question-Lines);
+    border-bottom:2px solid var(--Question-Lines);
+    border-left:2px solid var(--Question-Lines);
+    display:table-cell;
+    
+}
+ 
+.question {
+    padding:12px 10px;
+    font-family:inconsolata;
+    font-size:15px;
+    color:var(--Question-Text);
+    text-shadow:1px 1px 1px var(--Question-Text-Shadow);
+    line-height:1.8em;
+    text-align:left;
+    display:table-cell;
+}
+ 
+.donut {
+    width:10px;
+    border-top:2px solid var(--Question-Lines);
+    border-bottom:2px solid var(--Question-Lines);
+    border-right:2px solid var(--Question-Lines);
+    display:table-cell;
+}
+ 
+/*-----ANSWER STYLING-----*/
+.one-answer {
+    margin-top:30px;
+    margin-left:calc((650px / 2) - 70px);
+    display:flex;
+}
+ 
+.a-wrap {
+    display:table;
+    width:100%;
+}
+ 
+.pancake {
+    width:10px;
+    border-top:2px solid var(--Answer-Lines);
+    border-bottom:2px solid var(--Answer-Lines);
+    border-left:2px solid var(--Answer-Lines);
+    display:table-cell;
+}
+ 
+.answer {
+    padding:12px 10px;
+    font-family:inconsolata;
+    font-size:15px;
+    color:var(--Answer-Text);
+    text-shadow:1px 1px 1px var(--Answer-Text-Shadow);
+    line-height:1.8em;
+    text-align:center;
+    display:table-cell;
+}
+ 
+.queen {
+    width:10px;
+    border-top:2px solid var(--Answer-Lines);
+    border-bottom:2px solid var(--Answer-Lines);
+    border-right:2px solid var(--Answer-Lines);
+    display:table-cell;
+}
+ 
+.line-beer {
+    align-self:flex-end;
+    -webkit-align-self:flex-end;
+    margin-bottom:22px;
+    margin-right:16px;
+    width:18px;
+    height:2px;
+    background:var(--Answer-Lines);
+}
+ 
+.a-marker {
+    align-self:flex-end;
+    -webkit-align-self:flex-end;
+    margin-bottom:12px;
+    font-family:canela;
+    text-transform:uppercase;
+    font-size:22px;
+    letter-spacing:5px;
+    color:var(--A);
+    text-shadow:1px 1px 1px var(--A-Text-Shadow);
+}
+ 
+/*-----CUSTOM LINKS-----*/
+#cl-a {
+    position:fixed;
+    top:0;left:0;margin-left:5vw;
+    height:100vh;
+    display:table;
+    z-index:9;
+}
+ 
+#cl-b {
+    display:table-cell;
+    vertical-align:middle;
+}
+ 
+#customlinks {
+    padding:10px 0;
+    display:flex;
+    color:var(--Custom-Links);
+}
+ 
+.sq {
+    align-self:center;
+    -webkit-align-self:center;
+    width:15px;
+    height:15px;
+    border:1px solid var(--Custom-Links);
+    border-radius:3px;
+}
+ 
+#customlinks:hover .sq {background:var(--Custom-Links);}
+ 
+.sq-a {
+    margin-left:15px;
+    margin-top:1px;
+    font-family:canela;
+    text-transform:uppercase;
+    font-size:15px;
+    letter-spacing:2px;
+}
+ 
+/*-------MUSIC PLAYER-------*/
+#glenplayer02 {
+   position:fixed;
+   bottom:0;margin-bottom:20px;
+   left:0;margin-left:20px;
+   display:flex;
+   z-index:99;
+}
+#glenplayer02 a {text-decoration:none;}
+ 
+#glenplayer02 > div {
+   align-self:center;
+   -webkit-align-self:center;
+}
+ 
+.music-controls {
+   user-select:none;
+   -webkit-user-select:none;
+   width:13px;
+   font-size:13px;
+   cursor:pointer;
+}
+ 
+.playy, .pausee {color:var(--Music-Player);}
+ 
+.pausee {display:none;}
+ 
+.sonata {
+   margin-left:10px;
+   color:var(--Music-Player);
+}
+ 
+.labeltext {
+   margin-left:8px;
+   font-family:courier new;
+   font-size:9px;
+   color:var(--Music-Player);
+}
+ 
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div id="cl-a">
+<div id="cl-b">
+ 
+    <!-----CUSTOM LINKS----->
+    <a id="customlinks" href="https://keen2meecha.tumblr.com/wip-masterlist
+">
+    <div class="sq"></div>
+    <div class="sq-a">my wips</div>
+    </a><!--end one custom link-->
+    
+    <a id="customlinks" href="https://keen2meecha.tumblr.com/ask">
+    <div class="sq"></div>
+    <div class="sq-a">message</div>
+    </a><!--end one custom link-->
+    
+    <a id="customlinks" href="https://keen2meecha.tumblr.com/archive">
+    <div class="sq"></div>
+    <div class="sq-a">archive</div>
+    </a><!--end one custom link-->
+    
+    <!--PAGE CREDIT. PLS DO NOT REMOVE TY! :)-->
+    <a id="customlinks" href="//glenthemes.tumblr.com" title="page by glenthemes">
+    <div class="sq"></div>
+    <div class="sq-a">credit</div>
+    </a><!--end one custom link-->
+    
+</div><!--cl-b--><!--do not delete this line-->
+</div><!--cl-a--><!--do not delete this line-->
+
+ 
+ 
+ 
+<div id="cont-h-1">
+<div id="cont-h-2">
+<div id="box">
+ 
+<div id="title">About Me!</div>    <!-----MAIN TITLE----->
+<div id="title-border"></div>
+    
+<div id="contwrap">
+    <!-----QUESTIONS AND ANSWERS----->
+    <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">So, who are you?</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+    <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">I'm Keena! I use she/her or they/them pronouns (I genuinely don't mind either way!) and although I am generally happy to meet people, I have some pretty terrible anxiety. If you want to be friends, I'm afraid you'll most likely have to make the first move.</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+    <div class="one-question">
+    <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">You're a writer? What genres do you write?</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+    <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">Yep, I dabble in pretty much every genre! I tend to lean more towards anything involving magic (or the genre equivalent to magic) but I have been known to write realistic fiction once or twice!</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+     <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">Is there anywhere I can read your writing?</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+     <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">While I don't have anything published, you can read snippets from my wips and short stories in the <a href="https://keen2meecha.tumblr.com/tagged/keen-2-share">keen 2 share</a> tag on my blog! All snippets of my work have image transcripts, while the longer pieces are written right into tumblr so it should (hopefully) be accessible!</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+      <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">Can I be on your taglist?</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+    <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">Absolutely, thank you for your interest! On principle I don't add people to my taglist unless they say the words "I want to be on this taglist" (or the equivalent, obviously), but you can say them anywhere; in the tags of one of the wip's posts, in a comment, in an ask, in a dm - whatever makes you most comfortable!</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+        
+        <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">What about your universal taglist?</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+        <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">Ah, that one's a bit more complicated. Since I write so many different genres, I don't feel comfortable automatically tagging people in all of my work. Just bcause you like my relativey lighthearted ya urban fantasy wip, for example, doesn't mean you'll like the edgy new adult fantasy/sci-fi thing. What I will do if you ask to be on 'all' of my taglists, however, is add you to the wip intro list. This means that you'll get tagged in every wip intro that I post, and if you like what you see, then you can ask to be on that taglist! That way you won't miss any of my wips, but you won't be forced into an uncomfortable situation!</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+    <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">*Every* wip intro?</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+    <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">I have, quite frankly, a rather alarming number of wips. I am, at any given time, drowning in drafts. Don't worry - I work very hard to pace myself so as to not overwhelm my followers! But I've also discovered that I rather like making intros, so I'm not going to just not do them. I try not to do more than one a month,if that, but I may get excited and do two in one month. I have impulse control, but not a lot of it.</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+    <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">I asked to be on a taglist, but you didn't tag me?</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+    <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">There are two possibile reasons for this. One: you just recently asked to be on the taglist, so I forgot to put you in my notes list. This hasn't happened yet, but knowing me it probably will eventually. Please feel free to bring it up so I can fix my mistake!! The other possibility is you asked to be on the 'universal' taglist and you're a minor. While I don't do extreme background checks on any asks, of course, I tend to glance over the blogs who ask to be on my taglists because I like to meet people! If I see that you're a minor, then I won't automatically tag you in any new adult or adult intros because I'm still figuring out my boundaries with that. I don't write anything sexual, but my new adult/adult stuff sometimes deals wth slightly darker themes such as drug/alcohol use. Luckily I mostly stick to ya so this shouldn't be a big deal, but I do occasionally branch out.</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+    <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">So if I'm underage, I can't be on a new adult or adult wip taglist?</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+    <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">Well, no. If you see the intro and it really catches you're attention, you can absolutely request to be on the taglist. It's an opt-in sort of situation, because I'm trustng you to know your own limits. I'm just not going to automatically expose you to themes like that. (And don't worry - anything that has 'adult' themes will have a content warnings section on the intro post so everyone is prepared.)</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+    <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">Sorry, but I want to be removed from a taglist.</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+    <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">Totally fine! Just let me know and I'll remove you. While I'm down to know what it was that turned you off, there's no explanation necessary - and, of course, no hard feelings!</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+        <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">I don't like [theme] in this wip!</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+        <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">I'm sorry! Every wip has its own tag, so please block that tag so you're not forced to see something that brings you discomfort! If you saw my wip through somebody besides me and you don't want to follow me, feel free to block me - it's not like I'll know!</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+    <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">You used the wrong [they're/there/their/your/you're].</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+        <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">Yeah probably.</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+        <div class="one-question">
+        <div class="q-marker">Q.</div>
+        <div class="line-beef"></div>
+        <div class="q-wrap">
+        <div class="cherry"></div>
+        <div class="question">It's bothering me.</div>
+        <div class="donut"></div>
+        </div><!--q-wrap-->
+    </div><!--end one-question-->
+    
+        <div class="one-answer">
+        <div class="a-wrap">
+        <div class="pancake"></div>
+        <div class="answer">It's bothering me too, bud.</div>
+        <div class="queen"></div>
+        </div><!--a-wrap-->
+        <div class="line-beer"></div>
+        <div class="a-marker">A.</div>
+    </div><!--end one answer-->
+    
+<!--do not delete below this line-->
+</div><!--contwrap-->
+</div><!--box-->
+</div><!--cont-h-2-->
+</div><!--cont-h-1-->
+ 
+ 
+</body>
+</html>
