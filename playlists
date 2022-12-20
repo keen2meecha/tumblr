@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <link rel="shortcut icon" href="{Favicon}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-----------------------------------------------------------------------
+ 
+    {   cloudythms
+                playlists 01 theme    }
+        
+    by cloudythms.tumblr.com
+ visit my support page for help
+...... editing ......
+search for "V A R I A B L E S"
+to change variables
+(e.g. colors and sizes)
+search for "T H E M E"
+to switch to light theme.
+search for "C O N T E N T "
+to edit the content of the theme.
+a guide is there.
+ 
+......  rules  ......
+* edit as much as you want for personal use
+* do not remove the credit (you may move it)
+* do not steal parts of my codes
+* do not redistribute or use as base
+ 
+---------------------------------------------------------------------->
+
+        <!-- Page Title
+(Text that appears on the tab / browser window)
+Change the text between <title> and </title>.
+Write {Title} to let your blogtitle show. -->
+        <title>
+            playlists!
+        </title>
+
+        <!-- V A R I A B L E S 
+COLORS:
+Only change the color codes (after the : and before the ;)
+Make sure there is one # before the hex code.
+Example: --color-accent:#efefef;
+You can also use "black" and "white".
+Example: --color-background:white;
+Get hex color codes here:
+https://htmlcolorcodes.com/color-picker/
+ 
+SIZES:
+For the sizes, it should look like this: --fontSize:12px;
+Change the number to your liking.
+Example (smaller font): --fontSize:10px;
+Example (bigger font): --fontSize:13px;
+Make sure the : and px; are still there.
+-->
+        <style>
+            /* DARK THEME */
+            body.dark {
+                --font-size: 15px;
+                --color-icons: white;
+                --color-background: #181818;
+                --color-headerGradient: rgba(255, 255, 255, 0.2);
+                --color-text: #b1b1b1;
+                --color-boldText: white;
+                --color-accent: #24b856;
+            }
+            /* LIGHT THEME */
+            body.light {
+                --font-size: 15px;
+                --color-icons: white;
+                --color-background: #f5f5f5;
+                --color-headerGradient: rgba(0, 0, 0, 0.2);
+                --color-text: #1a1a1a;
+                --color-boldText: black;
+                --color-accent: #24b856;
+            }
+        </style>
+
+        <!-- ---------------------------------------------------------------- -->
+        <!-- ----------------------- C S S - S T A R T ---------------------- -->
+        <!-- ---------------------------------------------------------------- -->
+        <!-- Normalize -->
+        <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet" type="text/css" />
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap&subset=latin-ext"
+            rel="stylesheet"
+        />
+        <script src="https://kit.fontawesome.com/aa5e1d346f.js" crossorigin="anonymous"></script>
+        <style>
+            * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul {
+  padding-left: 2em;
+}
+hr {
+  border: 0;
+  height: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+strike {
+  -webkit-text-decoration: line-through solid black;
+  text-decoration: line-through solid black;
+}
+small {
+  font-size: 0.9em;
+}
+big {
+  font-size: 1.1em;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code {
+  display: block;
+  margin: 25px 10px;
+  padding: 10px;
+  max-height: 90vh;
+  overflow: auto;
+  font-size: 0.8em;
+}
+/* ---------------------------------------------- */
+/* ------------------ BASICS -------------------- */
+/* ---------------------------------------------- */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--font-size);
+  background: var(--color-background);
+  color: var(--color-text);
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: calc(var(--font-size) - 1px);
+  }
+}
+@media screen and (max-width: 420px) {
+  body {
+    font-size: calc(var(--font-size) - 2px);
+  }
+}
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.3);
+}
+::selection {
+  background: rgba(0, 0, 0, 0.3);
+}
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.3);
+}
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  color: var(--color-text);
+  text-decoration: none;
+}
+ol {
+  padding-left: 2em;
+}
+/* ---------------------------------------------- */
+/* ------------------ LAYOUT -------------------- */
+/* ---------------------------------------------- */
+main {
+  max-width: 1220px;
+  margin: 0 auto 50px auto;
+  padding: 50px;
+}
+/* ---------------------------------------------- */
+/* ------------------ HEADER -------------------- */
+/* ---------------------------------------------- */
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--color-headerGradient)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, var(--color-headerGradient) 0%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+  height: 150px;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+h1 {
+  color: var(--color-boldText);
+  line-height: 1;
+  text-align: center;
+  font-weight: bold;
+}
+.back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: var(--color-boldText);
+}
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+nav a {
+  margin: 0 10px;
+  background: var(--color-accent);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  border-radius: 15px;
+  padding: 8px 25px;
+  line-height: 1.3;
+}
+nav a, nav a:hover {
+  color: var(--color-icons);
+}
+nav a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+/* ---------------------------------------------- */
+/* ----------------- PLAYLISTS ------------------ */
+/* ---------------------------------------------- */
+section {
+  max-width: 100%;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+h2 {
+  color: var(--color-boldText);
+  font-weight: 900;
+  border-bottom: 1px solid var(--color-headerGradient);
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  margin-right: 24px;
+}
+article {
+  width: 200px;
+  min-height: 290px;
+  max-width: 100%;
+  margin-right: 24px;
+}
+.cover {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.cover::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.cover .links {
+    opacity: 0;
+    z-index: 1;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+}
+.cover .links:before,
+.cover .links:after {
+    content: '';
+    display: block;
+}
+.cover .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--color-icons);
+  padding: 20px;
+}
+.cover .link:hover {
+  font-size: 21px;
+}
+.cover .link-info {
+  cursor: help;
+}
+.cover:hover .links {
+  opacity: 1;
+}
+.cover:hover::before {
+  display: block;
+}
+.text {
+  padding: 0 0.5em;
+}
+.text h3,
+.text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text h3 {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+.text h3,
+.text h3 a {
+  color: var(--color-boldText);
+}
+.text p {
+  font-size: 0.85em;
+  margin-top: 7px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+.info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 95%;
+  background: var(--color-background);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  z-index: 100;
+  padding: 30px;
+  font-size: 0.8em;
+  line-height: 1.5;
+  display: none;
+}
+.info .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.info .close:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  h2,
+  article {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 690px) {
+  section.big article {
+    width: 270px;
+    min-height: 350px;
+    margin-right: 10px;
+  }
+  section.big .cover {
+    width: 270px;
+    height: 270px;
+  }
+  section.big h2 {
+    margin-right: 10px;
+  }
+}
+/* ---------------------------------------------- */
+/* -------------------- ETC --------------------- */
+/* ---------------------------------------------- */
+/***** CLOUDYTHMS CREDIT 
+do not remove or copy *****/
+#credit {
+  position: fixed;
+  bottom: 8px;
+  right: 9px;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  font-size: 14px;
+  font-family: sans-serif;
+  z-index: 999999999999999;
+}
+#credit a {
+  text-decoration: none;
+  opacity: 0.7;
+  color: black;
+  -webkit-transition: 0.5s linear 0.3s;
+  transition: 0.5s linear 0.3s;
+}
+#credit a:before {
+  content: 'theme by cloudythms';
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  top: 6px;
+  line-height: 100%;
+  position: absolute;
+  margin-left: -13em;
+  opacity: 0;
+  color: black;
+  -webkit-transition: 0.5s linear 0.3s;
+  transition: 0.5s linear 0.3s;
+}
+#credit a:hover:before {
+  opacity: 1;
+  color: black;
+  -webkit-transition: 0.5s linear 0s;
+  transition: 0.5s linear 0s;
+}
+#credit a:hover {
+  color: black;
+  -webkit-transition: 0.5s linear 0s;
+  transition: 0.5s linear 0s;
+}
+@media screen and (max-width: 550px) {
+  #credit {
+    font-size: 12px;
+    bottom: 5px;
+    right: 6px;
+  }
+  #credit a:before {
+    content: 'cloudythms';
+    margin-left: -7em;
+    top: 4px;
+  }
+}
+            /***************************** custom css *****************************/
+            /* paste css below this line */
+        </style>
+    </head>
+    <body class="light">
+        <!-- T H E M E: CHANGE "dark" ABOVE TO "light" FOR LIGHT THEME. -->
+        <!-- ---------------------------------------------------------------- -->
+        <!-- ------------------- C O N T E N T - S T A R T ------------------ -->
+        <!-- ---------------------------------------------------------------- -->
+
+        <!--
+*** GUIDE ***
+- Replace SPOTIFY_PROFILE_LINK_HERE with your spotify profile link
+- Change any texts you see on the page (title, links, etc) however you want
+*** SECTION:
+- Insert between <main> and </main>
+- Change "big" to "small" to get a smaller display of playlists!
+- Insert your playlists between <section ...> and </section>
+<section class="big">
+    <h2>Optional Section Title</h2>
+    (INSERT PLAYLISTS HERE)
+</section>
+*** PLAYLIST:
+- Copy the code snippet below and paste in a section (or edit the examples)
+- Replace IMAGE_URL_HERE with your image url (300x300 pixels is best)
+- Replace POST_LINK_HERE with the link to your post about the playlist
+- Replace PLAYLIST_LINK_HERE (2x!) with the link to your playlist
+- Replace TITLE_HERE with your Playlist title
+- Replace INFO with anything. Examples:
+    - 12 FOLLOWERS
+    - 200 songs
+    - 2 hours 21 minutes
+    - All my favorite songs
+- Change "fas fa-retweet" to "fas fa-link" to get a link-icon instead of a reblog-icon.
+- Change "fab fa-spotify" to "fas fa-play-circle" to get a play-icon instead of a spotify-icon
+- Change "fas fa-info-circle" to "fas fa-bars" for a list-icon instead of an info-icon
+- Write addtional info about your playlist instead of POPUP_INFO
+- If you don't want any additional info, delete this whole line:
+    <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+<article>
+    <div class="cover"
+    style="background-image:url(IMAGE_URL_HERE)">
+        <div class="links">
+            <a href="POST_LINK_HERE" target="_blank" title="view post" class="link link-post">
+                <i class="fas fa-retweet"></i></a>
+            <a href="PLAYLIST_LINK_HERE" title="listen with spotify" class="link link-listen">
+                <i class="fab fa-spotify"></i></a>
+            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+        </div>
+    </div>
+    <div class="text">
+        <h3><a href="PLAYLIST_LINK_HERE">TITLE_HERE</a></h3>
+        <p>INFO</p>
+    </div>
+    <div class="info">
+        <div class="close"><i class="fas fa-times"></i></div>
+        <p>POPUP_INFO Example for simple text.</p>
+        <ul>
+            <li>POPUP_INFO Example for a list. Start and ends with "ul".</li>
+            <li>Change both "ul" to "ol" to get a numbered list</li>
+            <li>Each "li" is a bullet point.</li>
+            <li>Artist - <i>Songtitle</i></li>
+        </ul>
+    </div>
+</article>
+-->
+
+        <header>
+            <h1>My Playlists</h1>
+            <a href="/" class="back"><i class="fas fa-chevron-left"></i></a>
+            <nav>
+                <a href="https://open.spotify.com/user/686nymph?si=YORef1H0TPu0WPIke_Ygsw" target="_blank">My Spotify Profile</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="big">
+                <h2>Primary WIP:</h2>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80)"
+                        >
+                        <div class="links">
+                            <a href="https://keen2meecha.tumblr.com/post/666250192995172352/introducing-my-nano-2021-project-genre-new" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="https://open.spotify.com/playlist/0OzrJGtkPh5NXRP1XtG3Dc?si=3884ecb1d7a44192" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="https://open.spotify.com/playlist/0OzrJGtkPh5NXRP1XtG3Dc?si=3884ecb1d7a44192">The Anthology of Elizabeth Graham</a></a></h3>
+                        <p>38 songs</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            can we imagine, just for a moment, that this isn't a tragedy? (2 hr 17 min)
+                        </p>
+                    </div>
+                </article>
+                <article>
+            </section>
+            <section class="small">
+                <h2>Secondary:</h2>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80)"
+                    >
+                        <div class="links">
+                            <a href="https://keen2meecha.tumblr.com/post/190957007969/gifted-a-wip-by-yours-truly-genre-young-adult" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="https://open.spotify.com/playlist/2dWP5mQ0FI0ndIVG7wkL3i" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="https://open.spotify.com/playlist/2dWP5mQ0FI0ndIVG7wkL3i">gifted</a></h3>
+                        <p>23 SONGS</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            maybe the real gift was the friends we made along the way (1 hr 24 min)
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <section class="small">
+                <h2>Backburner:</h2>
+                                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://images.unsplash.com/photo-1525891618908-24765267dab7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)"
+                    >
+                        <div class="links">
+                            <a href="https://keen2meecha.tumblr.com/post/620678356155957248/happy-endings-yet-another-wip-by-yours" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="https://open.spotify.com/playlist/2KZHKu3x1D3VwgK83bEiJL?si=LNLm1qp1QtW1Ps2fpAbVUg" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="https://open.spotify.com/playlist/2KZHKu3x1D3VwgK83bEiJL?si=LNLm1qp1QtW1Ps2fpAbVUg">Happy Endings</a></h3>
+                        <p>35 SONGS</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                                                <p>
+                            "This doesn't end happily for you." // "Well, then let's be grateful a story is more than it's ending." (1 hr 51 min)
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://images.unsplash.com/photo-1514509353532-1419c0935d72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80)"
+                    >
+                        <div class="links">
+                            <a href="https://keen2meecha.tumblr.com/post/612617927551844352/nature-nurture-my-spring-break-novella-genre" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="https://open.spotify.com/playlist/0ix6g6d0VrE0GePG9BhW2O?si=9r87ssIfQnSeD8qKQ9XsvQ" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="https://open.spotify.com/playlist/0ix6g6d0VrE0GePG9BhW2O?si=9r87ssIfQnSeD8qKQ9XsvQ">Nature & Nurture</a></h3>
+                        <p>11 SONGS</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            songs to lead a rebellion to (38 min)
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://images.unsplash.com/photo-1575827846130-bdd20721ccc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)"
+                    >
+                        <div class="links">
+                            <a href="https://keen2meecha.tumblr.com/post/617863983717908480/for-fine-feathers-yet-another-wip-by" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="https://open.spotify.com/playlist/7xrpFikJV77aSmQdSXiPyV?si=dRvXnc3fSAKkowNvs6rd_g" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="https://open.spotify.com/playlist/7xrpFikJV77aSmQdSXiPyV?si=dRvXnc3fSAKkowNvs6rd_g">For Fine Feathers</a></h3>
+                        <p>22 songs</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+In this world, you only have two choices: live in the happy life, or die in the miserable truth. (1 hr 15 min)
+                        </p>
+                    </div>
+                </article>
+                 <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=849&q=80)"
+                    >
+                        <div class="links">
+                            <a href="https://keen2meecha.tumblr.com/post/633524372432437248/a-girl-named-summer-a-girl-named-winter" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="https://open.spotify.com/playlist/1D513vRa2Gu6yyoDDfd1WP?si=o-VQAlA9Sfi594z8NOP94A" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="https://open.spotify.com/playlist/2dWP5mQ0FI0ndIVG7wkL3i">A Girl Named Summer, </br> A Girl Named Winter</a></h3>
+                        <p>22 SONGS</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            none of this is simple (1 hr 17 min)
+                        </p>
+                    </div>
+                </article>
+                 <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://images.unsplash.com/photo-1530605290309-ebfe523e6605?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1934&q=80)"
+                    >
+                        <div class="links">
+                            <a href="https://keen2meecha.tumblr.com/post/636533928025571328/b-l-a-s-p-h-e-m-y-the-stars-incline-us-they-do" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="https://open.spotify.com/playlist/5qAnn5d1zs11XqXFihzktK?si=Y7DCtFgtQpKEYVW17gkmZA" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="https://open.spotify.com/playlist/2dWP5mQ0FI0ndIVG7wkL3i">Blasphemy</a></h3>
+                        <p>21 SONGS</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            the stars incline us, they do not bind us (1 hr 21 min)
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <div class="popup-overlay"></div>
+
+        <!-- ---------------------------------------------------------------- -->
+        <!-- --------------------- C O N T E N T - E N D -------------------- -->
+        <!-- ---------------------------------------------------------------- -->
+
+        <!-- ---------------------------- credit ---------------------------- -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/snippets/credit2.css"
+        />
+        <style>
+            #credit a,
+            #credit a:before {
+                color: var(--color-boldText);
+            }
+            #credit a:hover,
+            #credit :hover:before {
+                color: var(--color-boldText) !important;
+            }
+        </style>
+        <!-- credit link. you may move but not remove. -->
+        <div id="credit">
+            <a href="https://cloudythms.tumblr.com/"> <i class="far fa-copyright"></i></a>
+        </div>
+
+        <!-- ------------------------- tumblr controls  --------------------- -->
+        <style>
+            iframe.tmblr-iframe,
+            iframe.tmblr-iframe:hover,
+            .hcontrols {
+                display: none !important;
+            }
+        </style>
+
+        <!-- --------------------------- SCRIPTS --------------------------- -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Smooth Scroll -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+
+        <!-- Tooltips -->
+        <script src="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/resources/style-my-tooltips.js"></script>
+        <script>
+            // $(document).ready(function() {
+            //     let delayTimeInMs = 30; // put a higher number for more delay
+            //     let fadeSpeedInMs = 300; // put a higher number for a slower fade
+            //     $('a[title]').style_my_tooltips({
+            //         tip_delay_time: delayTimeInMs,
+            //         tip_fade_speed: fadeSpeedInMs
+            //     });
+            // });
+        </script>
+
+        <!-- No Tumblr Redirects -->
+        <script>
+            $(document).ready(function() {
+                //remove tumblr redirects script by magnusthemes@tumblr
+                $('a[href*="t.umblr.com/redirect"]').each(function() {
+                    var originalURL = $(this)
+                        .attr('href')
+                        .split('?z=')[1]
+                        .split('&t=')[0];
+                    var replaceURL = decodeURIComponent(originalURL);
+                    $(this).attr('href', replaceURL);
+                });
+            });
+        </script>
+
+        <!-- Theme-specific Scripts -->
+        <script>
+            $(document).ready(function() {
+                $('.link-info').click(function() {
+                    $(this)
+                        .closest('article')
+                        .find('.info')
+                        .show();
+                    $('.popup-overlay').show();
+                });
+                $('.close, .popup-overlay').click(function() {
+                    $('.info').hide();
+                    $('.popup-overlay').hide();
+                });
+            });
+        </script>
+    </body>
+</html>
