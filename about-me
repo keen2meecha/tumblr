@@ -147,7 +147,7 @@ iframe#tumblr_controls, .iframe-controls--desktop {
  
 /*--------------------BASICS--------------------*/
 body {
-    background:#10121F url('https://www.tropicdrawing.com/wp-content/uploads/2019/09/watercolor-53.jpg');
+    background:#10121F url('https://img.freepik.com/premium-photo/blue-orange-pink-teal-pastel-ombre-watercolor-background_199112-212.jpg?w=2000');
     background-attachment:fixed;
     background-repeat:no-repeat;
     background-position:center;
