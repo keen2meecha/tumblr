@@ -1,0 +1,569 @@
+<!------------------------------------------------------------------------
+ 
+ 
+ 
+                    archivist // by @atlasthemes
+                    pls do not remove credit, thanks!<3
+ 
+ 
+ 
+------------------------------------------------------------------------->
+ 
+<!DOCTYPE html>
+<head>
+<link rel="shortcut icon" href="{Favicon}">
+ 
+<title>works in progress!</title><!-- title for browser tab -->
+ 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+ 
+<style type="text/css">
+ 
+/* -------------------------- change colors here ------------------------ */
+ 
+ 
+:root {
+    --body:#444444; /* text color */
+    --link-color:#000; /* link color */
+    --accent:#b492a9; /* accent color */
+}
+ 
+ 
+/* ---------------------------------------------------------------------- */
+ 
+ 
+@-webkit-keyframes fadein {
+        0%   {opacity: 0;}
+        100% { opacity: 1; }}
+ 
+@-moz-keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }}
+ 
+@keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }}
+ 
+body {
+    font-family:Calibri;
+    font-size:16px;
+    line-height:1.5em;
+    color:var(--body);
+    text-align:left;
+    background-color:#fff;
+    letter-spacing:0.2px;
+    word-spacing:0.5px;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    -webkit-animation: fadein 1.3s;
+    -moz-animation:fadein 1.3s;
+    animation:fadein 1.3s;
+    overflow-x:hidden;
+}
+ 
+a {color:var(--link-color);text-decoration: none;} a:hover {color:var(--accent);}
+ 
+#banner {display:block;position:relative;height:23px;padding:13px;} #banner-title i {margin-right:5px;margin-top:-5px;}
+ 
+#banner-title {
+    display:inline-block;
+    font-family:Georgia;
+    font-size:19px;
+    line-height:23px;
+    color:var(--accent);
+    vertical-align:middle;
+}
+ 
+#banner-links {float:right;text-align:right;} #banner-links span {display:inline-block;color:var(--link-color);margin-left:12px;}
+ 
+#bar {
+    display:block;
+    position:relative;
+    width:100%;
+    height:25px;
+    background-color:var(--accent);
+    box-shadow:2px 2px 3px #ddd;
+    margin-bottom:40px;
+}
+ 
+#bar-links {margin-left:15px;} #bar-links a {color:#fff;font-size:16px;line-height:28px;padding:5px 5px 6px 5px;} #bar-links a:hover {color:var(--body);background-color:#eee;}
+ 
+#container {
+    display:block;
+    position:relative;
+    margin:0px auto 100px auto;
+    width:800px;
+    height:auto;
+    top:75px;
+    border:1px solid #f6f6f6;
+    box-shadow:3px 3px 5px #f6f6f6;
+    padding-bottom:50px;
+}
+ 
+#top-buttons {display:block;position:relative;text-align:right;margin-bottom:10px;margin-right:35px;} #top-buttons i {font-size:12px;} #top-buttons button {font-family:Calibri;font-size:15px;background-color:#fafafa;border-radius:3px;line-height:16px;margin-left:5px;} #top-buttons button a {color:var(--body);}
+ 
+#box-container {width:750px;margin:auto;}
+ 
+#sidebar {
+    display:block;
+    float:left;
+    margin:0px 20px 0px 0px;
+    padding:10px 0px;
+    border-top:5px solid var(--accent);
+    border-bottom:5px solid var(--accent);
+    width:100px;
+    height:auto;
+    top:0px;
+    left:0px;
+    border-radius:4px;
+}
+ 
+#sidebar article {margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #eee;text-align:right;} #sidebar article:last-of-type {border-bottom:0px!important;padding-bottom:0px!important;margin-bottom:0px!important;} #sidebar article a {color:var(--body);display:block;padding:0px 5px;} #sidebar article a:hover {color:var(--accent);background-color:#eee;} #sidebar article span {display:block;padding:0px 5px;}
+ 
+.wip-box {
+    display:inline-block;
+    position:relative;
+    border:1px solid #eee;
+    width:615px;
+    height:auto;
+    margin:auto;
+}
+ 
+.wip-box-title {
+    background-color:#eee;
+    font-family:Georgia;
+    font-size:16px;
+    line-height:18px;
+    padding:5px 10px;
+}
+ 
+section {
+    display:block;
+    margin:15px;
+    padding:15px;
+    height:auto;
+    border:1px solid #eee;
+}
+ 
+.project-top {display:block;margin-bottom:5px;height:50px;}
+ 
+.project-image {
+    display:inline-block;
+    float:left;
+    margin-right:10px;
+    width:55px;
+    height:55px;
+    vertical-align:middle;
+}
+ 
+.project-image img {width:50px;height:50px;}
+ 
+.project-title {
+    font-family:Georgia;
+    font-size:17px;
+    vertical-align:middle;
+    padding-top:6px;
+}
+ 
+.project-title a {
+    color:var(--accent);
+}
+ 
+.project-title a:hover {
+    color:var(--link-color);
+}
+ 
+.project-title u {color:var(--accent);border-bottom:1px solid var(--accent);text-decoration:none;}
+ 
+.themes {position:relative;margin:8px 0px;} .themes span {margin-right:8px;text-decoration:none;border-bottom:1px dotted var(--body);} .themes a {color:var(--body);text-decoration:none;} .themes a:hover {color:#fff;background-color:var(--accent);}
+ 
+.stats {text-align:right;margin-top:8px;} .stats span {display:inline-block;margin-left:8px;}
+ 
+iframe.tmblr-iframe {display:none;}
+ 
+</style>
+</head>
+<body>
+ 
+<!------------------------------------------------------------------------->
+<!--                                                                     -->
+<!--                      customization starts here                      -->
+<!--                                                                     -->
+<!------------------------------------------------------------------------->
+ 
+<div id="container">
+ 
+ 
+<div id="banner">
+ 
+<!-- top banner -->
+ 
+<div id="banner-title"><i class="fas fa-sitemap"></i> atlasthemes</div>
+   
+<div id="banner-links">
+    <span>hi, keen2meecha!</span> <!-- your name here -->
+    <span>post</span>
+    <span>log out</span>
+</div>
+</div>
+ 
+<!-- top bar -->
+ 
+<div id="bar">
+    <div id="bar-links">
+        <a href="https://www.tumblr.com/">home</a>
+        <a href="https://keen2meecha.tumblr.com/ask">contact</a>
+        <a href="https://keen2meecha.tumblr.com/archive">archive</a>
+        <!-- pls don't remove this one, thanks!!<3 -->
+        <a href="http://www.atlasthemes.tumblr.com">theme</a>
+    </div>
+</div>
+ 
+ 
+<!-- top buttons : these are just for show but you can make them links if you want -->
+ 
+<div id="top-buttons">
+    <button>post new</button>
+    <button>edit works</button>
+    <button>subscribe</button>
+    <button>invitations</button>
+</div>
+ 
+ 
+<div id="box-container">
+ 
+<!-- sidebar -------------------------------------------------------------->
+<div id="sidebar">
+ 
+<!-- change these links to whatever you want! -->
+ 
+    <article> <!-- top sidebar links -->
+        <a href="https://keen2meecha.tumblr.com/">dashboard</a>
+        <a href="https://keen2meecha.tumblr.com/wips-playlists">playlists</a>
+    </article>
+   
+    <article>
+        <span>works (7)</span>
+        <span>complete (1)</span>
+        <span>series (3)</span>
+    </article>
+   
+    <article> <!-- bottom sidebar links -->
+        <a href="https://keen2meecha.tumblr.com/ask">inbox</a>
+        <a href="https://keen2meecha.tumblr.com/tagged/keen-2-share">history</a>
+        <a href="https://www.tumblr.com/follow/keen2meecha">subscribe</a>
+    </article>
+</div>
+ 
+ 
+<!-- current works section ------------------------------------------------>
+ 
+ 
+ 
+<div class="wip-box">
+<div class="wip-box-title">Current Works</div>
+
+<!---------- project seven ---------->
+<section>
+ 
+<div class="project-top">
+    <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1535407338890-e52101286bdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=800">
+    </div>
+   
+    <div class="project-title">
+        <u><a href="https://keen2meecha.tumblr.com/post/701858298385825792/kikimora">Love in the Sky</a></u> by <u>Keena</u><br/>
+        adult novel
+    </div>
+</div>
+ 
+<div class="themes">
+    <span><b>themes:</b></span>
+    <span>lgbt+</span>
+    <span>healing</span>
+    <span>sarcasm as a defense mechanism</span>
+    <span>fucked up women my beloveds</span>
+    <span>pining</span>
+    <span>tagged as:</span>
+     <span><a href="https://keen2meecha.tumblr.com/tagged/lits">lits</a></span>
+</div>
+ 
+After having an impulsive one-night-stand with a rich butch called Aries, college student and artist Kikimora is torn between her desire for love and her fear of repeating past mistakes; it doesn't help when Aries decides to do everything in her power to woo her.
+
+<div class="stats">
+    <span>Started: 2022-11-05</span>
+    <span>Genres: Contemporary Romance</span>
+    <span>Books: 1</span>
+    <span>Draft: First</span>
+    <span>POV: Past, Third</span
+</div>
+</section>
+<!---------- end of project seven ----------> 
+
+
+
+<!---------- project one ---------->    
+ 
+<section>
+<div class="project-top">
+    <div class="project-image">
+       
+        <!-- project image -->
+        <img src="https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80">
+    </div>
+   
+    <div class="project-title">
+   
+        <!-- project title : title can link to your project tag -->
+        <u><a href="https://keen2meecha.tumblr.com/post/190957007969/gifted-a-wip-by-yours-truly-genre-young-adult">gifted (Or Otherwise)</a></u> by <u>Keena</u> <br/>
+        young adult series
+    </div>
+</div>
+ 
+<!-- themes -->
+<div class="themes">
+    <span><b>themes:</b></span>
+    <span>friends to found family</span>
+    <span>mental health</span>
+    <span>superheroes</span>
+    <span>lgbt+</span>
+    <span>hurt/comfort</span>
+    <span>tagged as:</a></span>
+    <span><a href="https://keen2meecha.tumblr.com/tagged/gifted">gifted</a></span>
+    <span><a href="https://keen2meecha.tumblr.com/tagged/gifted-answers">gifted answers</a></span>
+</div>
+ 
+<!-- add your synopsis here -->
+
+
+After nearly failing the application test, a young girl rejected by a superpowered society for not having a superpower of her own is accepted into Falks, a school that teaches kids how to be superheroes; but after an attack on the school nearly kills her and her classmates, she must learn to work with her new friends before one of her oldest friends is lost forever.
+
+
+ 
+<!-- project stats -->
+<div class="stats">
+    <span>Started: 2016-11-23</span>
+    <span>Genres: Sci-Fi, Magical Realism, Superhero</span>
+    <span>Books: 4</span>
+    <span>Draft: Fourth</span>
+    <span>POV: Past, Third</span>
+</div>
+</section>
+<!---------- end of project one ---------->   
+ 
+ 
+ 
+   
+<!---------- project two ---------->    
+ 
+<section>
+<div class="project-top">
+    <div class="project-image">
+       
+        <!-- project image -->
+        <img src="https://images.unsplash.com/photo-1514509353532-1419c0935d72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80">
+    </div>
+   
+    <div class="project-title">
+   
+        <!-- project title : title can link to your project tag -->
+        <u><a href="https://keen2meecha.tumblr.com/post/612617927551844352/nature-nurture-my-spring-break-novella-genre">Nature & Nurture</a></u> by <u>Keena</u> <br/>
+        young adult novella
+    </div>
+</div>
+ 
+<!-- themes -->
+<div class="themes">
+    <span><b>themes:</b></span>
+    <span>found family</span>
+    <span>capitalism</span>
+    <span>rebellion</span>
+    <span>major character death</span>
+    <span>tagged as:</a></span>
+    <span><a href="https://keen2meecha.tumblr.com/tagged/n%2F%2Fn">n//n</a></span>
+</div>
+ 
+<!-- add your synopsis here -->
+
+
+On the verge of being locked into a life she hates, a waste collector discovers a band of rebels hiding in the woods outside of her hometown; but when she discovers her very personal connection to the rebels' leader, she must let go of everything she ever thought was normal or risk dousing the rebellion before it can start.
+ 
+<!-- project stats -->
+<div class="stats">
+    <span>Started: 2019-03-09</span>
+    <span>Genres: Dystopian</span>
+    <span>Books: 1</span>
+    <span>Draft: First</span>
+    <span>POV: Past, Third</span>
+</div>
+</section>
+<!---------- end of project two ---------->
+   
+   
+   
+<!---------- project three ---------->
+<section>
+ 
+<div class="project-top">
+    <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1575827846130-bdd20721ccc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+    </div>
+   
+    <div class="project-title">
+        <u><a href="https://keen2meecha.tumblr.com/post/617863983717908480/for-fine-feathers-yet-another-wip-by">For Fine Feathers</a></u> by <u>Keena</u><br/>
+        new adult book
+    </div>
+</div>
+ 
+<div class="themes">
+    <span><b>themes:</b></span>
+    <span>wlw</span>
+    <span>gray morality</span>
+    <span>post-war conspiracies</span>
+    <span>secrets</span>
+    <span>like a concerning amount of secrets</span>
+    <span>they're neverending</span>
+    <span>tagged as:</span>
+     <span><a href="https://keen2meecha.tumblr.com/tagged/fff">fff</a></span>
+</div>
+ 
+Two women - one who knows nothing about the world outside her home and one who knows far too much about it - work to uncover the horrifying secrets of a war that happened before they were born.
+
+<div class="stats">
+    <span>Started: 2017-10-26</span>
+    <span>Genres: Sci-fi/Fantasy</span>
+    <span>Books: 1</span>
+    <span>Draft: Zero</span>
+    <span>POV: Past, Third, Multiple Persepective</span>
+</div>
+</section>
+<!---------- end of project three ---------->
+
+
+
+
+<!---------- project four ---------->
+<section>
+ 
+<div class="project-top">
+    <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1570075842600-4fb332449e00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80">
+    </div>
+   
+    <div class="project-title">
+        <u><a href="https://keen2meecha.tumblr.com/post/615068643169058816/yes-i-did-this-instead-of-homework-or-camp-nano">Till Kingdom Come</a></u> by <u>Keena</u> <br/>
+        young adult book
+    </div>
+</div>
+ 
+<div class="themes">
+    <span><b>themes:</b></span>
+    <span>friends both old and new</span>
+    <span>less-than-useful prophetic dreams</span>
+    <span>chosen one</span>
+    <span>dubious and gratuitously impractical politics</span>
+    <span>tagged as:</span>
+     <span><a href="https://keen2meecha.tumblr.com/tagged/tkc">tkc</a></span>
+</div>
+ 
+A normal girl with weird eyes discovers that she is the daughter of the recently-deceased king, and ropes a demon, her childhood best friend, and a dragon into helping her claim the throne before one of her many, many half-siblings can.
+
+<div class="stats">
+    <span>Started: 2019-10-19</span>
+    <span>Genres: Fantasy</span>
+    <span>Books: 1</span>
+    <span>Draft: First</span>
+    <span>POV: Past, Third</span>
+</div>
+</section>
+<!---------- end of project four ----------> 
+
+
+
+<!---------- project five ---------->
+<section>
+ 
+<div class="project-top">
+    <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1525891618908-24765267dab7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+    </div>
+   
+    <div class="project-title">
+        <u><a href="https://keen2meecha.tumblr.com/post/620678356155957248/happy-endings-yet-another-wip-by-yours">Happy Endings</a></u> by <u>Keena</u><br/>
+        young adult series
+    </div>
+</div>
+ 
+<div class="themes">
+    <span><b>themes:</b></span>
+    <span>lgbt+</span>
+    <span>memory loss</span>
+    <span>found family</span>
+    <span>polyamory</span>
+    <span>mutual pining</span>
+    <span>tagged as:</span>
+     <span><a href="https://keen2meecha.tumblr.com/tagged/h.e.">h.e.</a></span>
+</div>
+ 
+On the verge of graduating high school, a teen girl with a four-month gap in her memory moves in with the most popular - and most mysterious - boy in school and his uncle; but when she discovers their secret, she must confront her fear of commitment or risk losing her newfound family forever.
+
+<div class="stats">
+    <span>Started: 2018-12-23</span>
+    <span>Genres: Urban Fantasy</span>
+    <span>Books: 2</span>
+    <span>Draft: First</span>
+    <span>POV: Past, Third</span
+</div>
+</section>
+<!---------- end of project five ---------->
+
+<!---------- project six ---------->
+<section>
+ 
+<div class="project-top">
+    <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80">
+    </div>
+   
+    <div class="project-title">
+        <u><a href="https://keen2meecha.tumblr.com/post/666250192995172352/introducing-my-nano-2021-project-genre-new">The Anthology of Elizabeth Graham</a></u> by <u>Keena</u><br/>
+        young adult series
+    </div>
+</div>
+ 
+<div class="themes">
+    <span><b>themes:</b></span>
+    <span>lgbt+</span>
+    <span>healing</span>
+    <span>found family</span>
+    <span>breaking the cycle</span>
+    <span>eventual mutual pining</span>
+    <span>tagged as:</span>
+     <span><a href="https://keen2meecha.tumblr.com/tagged/e%26t">e&t</a></span>
+</div>
+ 
+Elizabeth has spent the past three years of her college career writing fictional stories about a guy who keeps popping up in her classes; when he finds out about them, she is surprised by his offer to become friends.
+
+<div class="stats">
+    <span>Started: 2021-11-01</span>
+    <span>Genres: Contemporary Romance</span>
+    <span>Books: 3</span>
+    <span>Draft: First</span>
+    <span>POV: Past, Third, Alternating</span
+</div>
+</section>
+<!---------- end of project six ----------> 
+
+
+
+<!----------
+ 
+to add more projects, copy one whole project and paste after the end of the second project, then update with new info. you can add as many projects as you want!
+ 
+---------->
+ 
+   
+</div></div></div>
+</body>
+</html>
