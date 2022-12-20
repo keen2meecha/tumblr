@@ -1,0 +1,951 @@
+<!------------------------------------------------------------------------
+ 
+                        constellations
+                        tabbed wip page
+                        by @atlasthemes
+                        pls do not remove credit
+                        thanks!<3
+ 
+------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<head>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+
+
+<!-- title for your browser tab -->
+<title>BLASPHEMY</title>
+
+<style>
+
+body {
+    font-family: 'Open Sans', sans-serif; /* main font */
+    font-size: 10px;
+    color: #444; /* font color */
+    background-color: #fff;
+    line-height:16px
+    letter-spacing:0.5px;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+}
+
+b {
+    font-weight: 700;
+    color: #a1a1a1; /* bold color */
+}
+
+i {
+    font-style: italic;
+    color: #444; /* italic color */
+    letter-spacing: 0.5px;
+}
+
+a {
+    color: #a1a1a1; /* link color */
+    text-decoration: none;
+    font-style: italic;
+    letter-spacing:0.5px;
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #222; /* link hover color */
+    transition: 0.3s ease-in-out;
+}
+
+h1 {font-size: 10px;letter-spacing: 1px;font-weight: 700;margin-bottom: 20px;margin-top: 25px;text-transform: uppercase;}
+h2 {font-size: 14px;font-weight: 700;letter-spacing: 1px;word-spacing: 3px;margin-top: 5px;text-align: center;}
+h3 {font-size: 14px;font-weight: 700;font-style: italic;letter-spacing: 1px;word-spacing: 3px;padding-top: 10px;text-align: center;}
+.lnr {font-size: 12px;margin-right: 5px;font-weight: 600;}
+
+.title-area {width: 540px;height: 40px;margin: auto;color: #444;text-align: center;padding-bottom: 15px;}
+
+.title-area a {padding-right: 3px;padding-left: 3px;}
+
+.wip-box {margin: auto;margin-top: 50px;width: 575px;height: auto;padding-bottom: 100px;}
+
+.subheading {margin-top: 5px;margin-bottom: 8px;font-size: 11px;color: #bbb;text-transform: uppercase;letter-spacing: 1px;}
+
+.tab {overflow: hidden;background-color: #fff;width: 600px;margin: auto;border-top: 1px solid #eee;border-bottom: 1px solid #eee;}
+
+.tab button {font-size: 9px;color: #444;letter-spacing: 0.5px;text-transform: uppercase;float: left;width: auto;border: none;outline: none;padding: 10px 11.8px;transition: 0.3s;}
+
+.tab button.active {font-size: 9px;color: #a1a1a1;letter-spacing: 0.5px;padding: 10px 11.8px;transition: 0.3s ease-in-out;}
+
+.tab button:hover {font-size: 9px;color: #a1a1a1;padding: 10px 11.8px;transition: 0.3s ease-in-out;}
+
+.tabcontent {font-size: 10px;color: #444;display: none;border-top: none;width: 600px;animation: fadeEffect 1s;background-color: #fff;letter-spacing:0.3px;}
+
+.header img {width: 600px;height:auto;text-align:center;padding-top:10px;}
+
+.details-columns {display: grid;grid-template-columns: auto auto;margin-left: 5px;}
+
+.character {width: 60px;height: 60px;margin-right: 5px;margin-bottom: 5px;float: left;}
+
+.character img {width: 60px;height: 60px;margin-right: 5px;margin-bottom: 5px;float: left;}
+
+.link-columns {display: grid;grid-template-columns: auto auto auto;padding-left: 15px;letter-spacing: 0.5px;}
+
+@keyframes fadeEffect {from {opacity: 0;}to {opacity: 1;}}
+
+/* CREDIT PLS DONT EDIT THX <3 */
+.atlas {position:fixed;right:20px;bottom:20px;}.atlas a {color:#a1a1a1;background:transparent;font-family:times new roman;font-size:15px;text-transform:lowercase;font-style:normal;} .atlas a:hover {color:#444;}
+</style></head>
+
+
+<!-------------------------------------------------------------------------
+
+editing starts here
+
+--------------------------------------------------------------------------->
+
+
+
+<body>
+
+<!--HEADER AREA------------------------------------------------------------>
+
+<div class="wip-box">
+<div class="title-area">
+<a href="https://keen2meecha.tumblr.com">home</a> &sdot;
+<a href="https://keen2meecha.tumblr.com/ask">ask</a> &sdot;
+<a href="http://www.tumblr.com/dashboard">dash</a>
+
+<h2>blasphemy</h2><!--TITLE-->
+</div>
+
+
+<!--TAB TITLES------------------------------------------------------------->
+<div class="tab">
+
+<!--THESE ARE THE TITLES OF YOUR WIPS THAT APPEAR AS TABS ACROSS THE TOP-->
+
+<button class="tablinks" onclick="openWIP(event, 'zero')" id="defaultOpen">SERIES OVERVIEW</button>
+
+<button class="tablinks" onclick="openWIP(event, 'one')">ONE</button>
+
+<button class="tablinks" onclick="openWIP(event, 'two')">TWO</button>
+
+<button class="tablinks" onclick="openWIP(event, 'three')">THREE</button>
+
+<button class="tablinks" onclick="openWIP(event, 'four')">FOUR</button>
+
+<button class="tablinks" onclick="openWIP(event, 'five')">FIVE</button>
+
+<button class="tablinks" onclick="openWIP(event, 'six')">SIX</button>
+
+<button class="tablinks" onclick="openWIP(event, 'seven')">SEVEN</button>
+
+<button class="tablinks" onclick="openWIP(event, 'eight')">EIGHT</button>
+
+<button class="tablinks" onclick="openWIP(event, 'nine')">NINE</button>
+
+<button class="tablinks" onclick="openWIP(event, 'ten')">TEN</button>
+<!-- to add more tabs across the top, copy this
+
+<button class="tablinks" onclick="openWIP(event, 'four')">TITLE</button>
+
+and paste it after the last one. make sure to update the number "four" as you add more and leave the single quote marks around it. then update "TITLE" with your new title -->
+</div>
+
+
+
+<!--------------------------------------------------------------------------
+
+TAB PAGE CONTENT BEINGS HERE. PLEASE READ!
+
+
+2. to add more tab pages, copy from the line "TITLE ONE" all the way through "END TITLE ONE" and paste it after your last page. update "title one" to match whatever number you're on so it's not confusing.
+
+3. make sure to update the number in the first line of each new tab page 
+
+<div id="one" class="tabcontent">
+
+to the corresponging number. it should match the TAB TITLES above. just update the number only.
+
+--------------------------------------------------------------------------->
+
+
+
+
+
+<!--TITLE ZERO-------------------------------------------------------------->
+<div id="zero" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1475115943564-fd744078e583?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhdW50ZWR8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60" /></div>
+
+<h3>Astra Inclinant, Sed Non Obligant</h3> <!-- this is your wip title -->
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>AUDIENCE &rsaquo;</b> NEW ADULT</div>
+    <div class="column"><b>STATUS &rsaquo;</b> FIRST DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> DEC 2020</div>
+    <div class="column"><b>POV &rsaquo;</b> MULTIPLE POV</div>
+    <div class="column"><b>BOOKS &rsaquo;</b> 10 </div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> CASPER, CAROLINE, ZEPHON, MISHKA</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+
+Siblings Casper and Caroline Colt travel around America, picking fights with demons, ghosts, and other supernatural threats, saving the world as they navigate their own complex dynamics and confront the most dangerous thing of all: their own inner demons.
+
+
+<!-- links - again, keep 'em short -->
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="https://keen2meecha.tumblr.com/tagged/wip%3A-blasphemy">series' tag</a></div>
+    <div class="column"><a href="https://open.spotify.com/playlist/5qAnn5d1zs11XqXFihzktK?si=shVKfTA1SuWRapmVALp4Fw">series playlist</a></div>
+    <div class="column"><a href="https://keen2meecha.tumblr.com/tagged/wip%3A-blasphemy">series' intro post</a></div>
+        <div class="column"><a href="/"></a>I wouldn't call this a tragedy</a></div>
+    <div class="column"><a href="/"></a>but I wouldn't not call it a tragedy either</a></div>
+    <div class="column"><a href="/"></a>series tw for genre-typical violence</div>
+
+</div>
+  
+<!-- worldbuilding -->
+  <h1><span class="lnr lnr-earth"></span> tidbits</h1>
+  <b>Interesting Thing #1:</b> Although their are sects of Hunters who would love to create more of a community, there are just as many who refuse to even consider the option unless it's their own family. Some of them have specific circumstances that they'll work with others; many do not. The Colt family is not the only exampe of this, but they are the most infamous. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> The best way to handle a demon case is to retreat, call for backup, or find a specialist. Preferably, all three. Those who don't will not live to the end of the encounter. Those who do this... will probably still die before the end of the encounter, but maybe they'll drag the demon out with them, if they're lucky.<br/><br/>
+  
+  <b>Interesting Thing #3:</b> Demon's blood is darker than human's, due to the high buildup of ectoplasm in their hosts' bodies. The longer the possession, the darker the blood.<br/>
+  
+</div>
+<!--END TITLE ZERO---------------------------------------------------------->
+
+
+
+<!--TITLE ONE-------------------------------------------------------------->
+<div id="one" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1522635922534-827978bf2a2f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzF8fHJvYWQlMjB0cmlwfGVufDB8MHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60" /></div>
+
+<h3>Semper Fidelis</h3> <!-- this is your wip title -->
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> URBAN FANTASY, MYSTERY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> DECEMBER 2020</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> TBD</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> CAROLINE, CASPER</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+
+A young college student drops out of her pre-med program to go chasing after the demons who kidnapped her as a baby when she learns that her father has gone missing on the brink of discovering them. Her estranged brother comes along, doing his best to prepare her for the upcoming confronation while also not betraying their missing-dad's wish - to not let her into the life. Together, the two must get along, find their dad, and figure out how to cope with the mysteries of their family before it's too late. Should be easy, right?
+
+
+<!-- links - again, keep 'em short -->
+<h1><span class="lnr lnr-link"></span> tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">wip intro</a></div>
+    <div class="column"><a href="https://open.spotify.com/playlist/0tIOToNgbu3moPYZOyqJPY?si=YgngxPv3QKK9PNeKCsxP8A">wip playlist</div>
+    <div class="column"><a href="/"></a>tw suicide</a></div>
+    <div class="column"><a href="/"></a>tw kidnapping</a></a></div>
+    <div class="column"><a href="/"></a>tw bad dad</a></div>
+    <div class="column"><a href="/"></a>dysfunctional families</a></div>
+    <div class="column"><a href="/"></a>the colts will die for each other and that is a threat</div>
+    <div class="column"><a href="/"></a>angst</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->  
+<img class="character" src="https://64.media.tumblr.com/a8dbf2fce8cd06547630c717aa5f8e56/286d672cd31e1294-d0/s640x960/e10281e1825ba0010f641ca7608c0b09c81500ff.png" width="60px" height"60px"/>
+    
+    <b>Caroline Colt:</b> After her kidnapping as a baby and her mother's suicide shortly thereafter, she should be excited for a normal life. Instead, though, she longs to live the same life as her remaining family and to hunt the same game, despite her father forbidding it. When her brother finds her in college and asks for her help, she is thrilled - except for the fact that she has a boyfriend who has no idea about her past. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<img class="character" src="https://64.media.tumblr.com/c5aad4d60aa628c49434a7bbcd540136/286d672cd31e1294-54/s640x960/a0ef00dc0d6fa4e51d32f14007cb1b074d7256a3.png" width="60px" height"60px"/>
+    
+    <b>Casper Colt:</b> He only cares about two things: protecting his sister, and living up to his dad's expectations. Everything else has always coe second. Now, however, with his dad in the wind and his sister determined to put herself in harm's way as often as possible, he will have to learn how to model better priorities - before one of them does something they can't come back from. <br/><br/><br/>
+    
+    <b>Nathaniel Colt:</b> The missing father.<br/><br/>
+    
+    <b>???:</b> A demon with information regarding the kidnapping of Caroline.
+ 
+  
+</div>
+<!--END TITLE ONE---------------------------------------------------------->
+
+
+
+<!--TITLE TWO-------------------------------------------------------------->
+<div id="two" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1587721865940-37ebee7fb730?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTl8fGdyYXZlfGVufDB8MHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60"/></div>
+
+<h3>Carpe Noctem</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="https://instagram.fotp3-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/110688723_205720194190860_3028656040460613470_n.jpg?_nc_ht=instagram.fotp3-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=DB1CgoR31bEAX-5h0Sq&tp=1&oh=7d20cce7e04cbc9f142b5260f12d3fdb&oe=5FE2B7B9" width="60px" height"60px"/>
+    
+    <b>Caroline:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="https://lh3.googleusercontent.com/proxy/65j1-7McNRso9g5NG6b3LkzM8mTBzuSasT0Rgslelw5XkBaaFpdwyZnzyET0CM3GyNXTJfv4wTw5ONO2Sihtdvlng7Jx_NrViU7RE8oXNOFaoTN8_fmbSESPRXnS0rGC23Q6EtKdYxZzZzXzOrJopMaaQAqw0IY_" width="60px" height"60px"/>
+    
+    <b>Casper:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. --> 
+
+</div>
+<!--END TITLE TWO---------------------------------------------------------->
+
+
+<!--TITLE THREE------------------------------------------------------------>
+<div id="three" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1488252056201-1ededa9b275d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YW5nZWx8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60" /></div>
+
+<h3>Auribus Teneo Lupum</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character One:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character Two:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  -->
+</div>
+<!--END TITLE THREE-------------------------------------------------------->
+
+<!--TITLE FOUR-------------------------------------------------------------->
+<div id="four" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1455747634646-0ef67dfca23f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8ZmlyZXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=500&q=60" /></div>
+
+<h3>Flectere Si Nequeo Superos, Acheronta Movebo</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character One:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character Two:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  -->
+</div>
+<!--END TITLE FOUR---------------------------------------------------------->
+
+
+<!--TITLE FIVE-------------------------------------------------------------->
+<div id="five" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1537210249814-b9a10a161ae4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c3Rvcm18ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60" /></div>
+
+<h3>Brutum Fulmen</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character One:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character Two:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  -->
+</div>
+<!--END TITLE FIVE---------------------------------------------------------->
+
+
+<!--TITLE SIX-------------------------------------------------------------->
+<div id="six" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1473893604213-3df9c15611c0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YXN5bHVtfGVufDB8MHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60" /></div>
+
+<h3>Timendi Causa Est Nescire</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character One:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character Two:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> There is a lot more to Miriam Colt than it would first seem. For one thing, her death was not truly a suicide. For another thing, she knew a lot more about the supernatural world than her loved ones believe. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  -->
+</div>
+<!--END TITLE SIX---------------------------------------------------------->
+
+
+<!--TITLE SEVEN-------------------------------------------------------------->
+<div id="seven" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://64.media.tumblr.com/a6f4b6db71501de3d1e8ba6a84deacb6/42557ac8741d8ec0-bd/s640x960/20fbab0b673c991619faef7ee8e3f944d9e23d9c.jpg" /></div>
+
+<h3>Ignotum Per Ignotius</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character One:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character Two:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  -->
+</div>
+<!--END TITLE SEVEN---------------------------------------------------------->
+
+
+<!--TITLE EIGHT-------------------------------------------------------------->
+<div id="eight" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1542255513-b6d35a189d88?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8c2t1bGx8ZW58MHwwfDB8&auto=format&fit=crop&w=500&q=60" /></div>
+
+<h3>Vox Nihili</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character One:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character Two:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  -->
+</div>
+<!--END TITLE EIGHT---------------------------------------------------------->
+
+
+<!--TITLE NINE-------------------------------------------------------------->
+<div id="nine" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1585252406583-b474fb5f5ade?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1064&q=80" /></div>
+
+<h3>In Absentia Lucis, Tenebrae Vicunt</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character One:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character Two:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  -->
+</div>
+<!--END TITLE NINE---------------------------------------------------------->
+
+
+<!--TITLE TEN-------------------------------------------------------------->
+<div id="ten" class="tabcontent">
+
+<!-- header img is 575px wide - delete the following line if you don't want a header image -->
+<div class="header"><img src="https://images.unsplash.com/photo-1570545834220-f708005efbed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" /></div>
+
+<h3>Felix Culpa</h3> <!-- this is your wip title -->
+<h3>COMING SOON</h3>
+
+<!-- details - you can change these to fit your project just not anything too long or the spacing gets wonky -->
+<!--
+<h1><span class="lnr lnr-menu"></span> details</h1>
+  <div class="details-columns">
+  
+    <div class="column"><b>GENRE &rsaquo;</b> NA FANTASY</div>
+    <div class="column"><b>STATUS &rsaquo;</b> ZERO DRAFT</div>
+    <div class="column"><b>STARTED &rsaquo;</b> JUNE 2018</div>
+    <div class="column"><b>POV &rsaquo;</b> DUAL POV</div>
+    <div class="column"><b>WORDS &rsaquo;</b> 20K</div>
+    <div class="column"><b>NARRATORS &rsaquo;</b> NAME</div>
+
+</div>
+  
+  
+<h1><span class="lnr lnr-pencil"></span> synopsis</h1> <!-- synopsis -->
+<!--
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+<!-- links - again, keep 'em short -->
+<!--
+<h1><span class="lnr lnr-link"></span> links/tags</h1>
+  <div class="link-columns">
+  
+    <div class="column"><a href="/">link 1</a></div>
+    <div class="column"><a href="/">link 2</a></div>
+    <div class="column"><a href="/">link 3</a></div>
+    <div class="column"><a href="/">link 4</a></div>
+    <div class="column"><a href="/">link 5</a></div>
+    <div class="column"><a href="/">link 6</a></div>
+
+</div>
+ 
+ 
+<h1><span class="lnr lnr-user"></span>characters</h1>
+
+<!-- if you don't want a character image, delete the following line -->
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character One:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br/><br/>
+
+<!-- if you don't want a character image, delete the following line --> 
+<!--
+<img class="character" src="/" width="60px" height"60px"/>
+    
+    <b>Character Two:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
+<!-- worldbuilding -->
+<!--
+  <h1><span class="lnr lnr-earth"></span> worldbuilding</h1>
+  <b>Interesting Thing #1:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/><br/>
+  
+  <b>Interesting Thing #2:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  -->
+</div>
+<!--END TITLE TEN---------------------------------------------------------->
+
+
+
+<!--------------------------------------------------------------------------
+
+END OF CUSTOMIZATION - DONT EDIT BEYOND THIS POINT
+
+--------------------------------------------------------------------------->
+
+<script>
+function openWIP(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+document.getElementById("defaultOpen").click();
+</script>
+     
+     
+<!--PLS DON'T EDIT -->
+<div class="atlas"><a href="http://www.atlasthemes.tumblr.com">a</a></div>
+</body>
+</html>
