@@ -1,0 +1,2278 @@
+<!-----------------------------------------------------------------------
+Character Page [01]: Fortitude
+Made by glenthemes
+
+Initial release: 2017/04/06
+Last updated: 2019/02/02
+ 
+TERMS OF USE:
+1) Do not remove the theme credit.
+2) Do not repost/redistribute my themes.
+3) Do not take parts of the code and use it as your own.
+4) Do not use my themes as a base code.
+5) Do not mix my themes together.
+
+If you would like to change the icons, please refer to this sheet:
+https://linearicons.com/free
+------------------------------------------------------------------------>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<head>
+ 
+<title>the kids of gifted!</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+ 
+<!--------------------TOOLTIP-------------------->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="//static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:100,
+tip_fade_speed:100,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+<!--------------------POPUP-------------------->
+<script type="text/javascript"
+src="//ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, .closewin').live('click', function() {
+$('#fade, .popup_block').fadeOut(function() {
+$('a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+
+<!--------------------FONTS------------------->
+<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+ 
+<style type="text/css">
+
+@font-face { font-family: "montserrat"; src: url('https://dl.dropboxusercontent.com/s/neq454mx5vhfhpq/Montserrat-UltraLight.otf'); }
+ 
+/*--------------------TOOLTIPS--------------------*/
+#s-m-t-tooltip {
+    padding: 2px 9px;
+    margin: 26px 9px 0px 15px;
+    background-color: #fbfbfc; /* tooltip background color */
+    font-family: karla;
+    font-size: 8.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #646464; /* tooltip color */
+    border:0.5px solid rgba(224,224,224,0.6); /* tooltip border */
+    z-index:9999999!important;
+    max-width:400px;
+}
+ 
+/*--------------------SCROLLBAR--------------------*/
+::-webkit-scrollbar {
+    width: 2.5px;
+    height: 2.5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #d6d1d1; /* scrollbar */
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #f9f9f9; /* scrollbar background */
+}
+ 
+/*--------------------SCROLLBAR--------------------*/
+::selection {
+background: #f8f8f9; /* highlighted background */
+color:#777; /* highlighted text */
+}
+ 
+::-moz-selection {
+background: #f8f8f9; /* highlighted background */
+color:#777; /* highlighted text */
+}
+ 
+/*--------------------BASICS--------------------*/
+body {
+background:#eeecec url(); /* background color and image */
+background-attachment:fixed;
+background-repeat:no-repeat; /* delete "no-" for tiled background */
+background-size:cover;  /* delete this line for tiled background */
+background-position:top right; /* delete this line for tiled background */
+cursor:normal;
+text-transform:uppercase;
+line-height:16px;
+font-size:7.5px;
+letter-spacing:1px;
+}
+ 
+/*--------------------LINKS--------------------*/
+a {
+text-decoration:none;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+}
+ 
+a:hover {
+text-decoration:none;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+}
+
+.lnr {
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+}
+ 
+/*--------------------TUMBLR BUTTONS--------------------*/
+iframe#tumblr_controls, .iframe-controls--desktop {
+    top:1px!important;
+    right:1px!important;
+    position:fixed!important;
+    opacity:0.3;
+    z-index:99999!important;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+iframe#tumblr_controls:hover, .iframe-controls--desktop:hover {
+    opacity:0.6;
+}
+ 
+/*---------------------------MAIN TITLE TEXT---------------------------*/
+#maintitle {
+    position:fixed;
+    margin:0 auto;
+    left:0;right:0;
+    bottom:700px; /* distance from the bottom, change if necessary */
+    width:600px; /* width of title, change if necessary */
+    padding:25px;
+    height:auto;
+    background-color:transparent;
+    font-family:montserrat;
+    text-transform:uppercase;
+    color:#aaa; /* main title color */
+    font-size:30px;
+    letter-spacing:5px;
+    line-height:1.25;
+    text-align:center;
+    z-index:1000;
+}
+
+/*-----------------------BOTTOM BAR-----------------------*/
+#botbar {
+    position:fixed;
+    margin:0 auto;
+    left:0;right:0;bottom:0;
+    width:100%;
+    height:86px;
+    background-color:#130f1a; /* bottom title background color */
+    display:table;
+    z-index:1000;
+}
+
+#botmid {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.bottext {
+    font-family: montserrat, "KaiTi", "楷体", STKaiti, "华文楷体", serif;
+    text-align:center;
+    font-size:30px;
+    color:#b4adb8; /* bottom title text color */
+    letter-spacing:4px;
+    padding:0px 100px 0px 100px;
+}
+
+/*-----------------------MAIN CHARACTER IMAGES-----------------------*/
+#image1 {
+    position:fixed;
+    margin:0 auto;
+    left:15px;right:50px;bottom:80px;
+    width:100%;
+    text-align:center;
+    white-space:wrap;
+    height:auto;
+}
+#image1 img {
+    margin-left:10px; /* distance between character images */
+    margin-right:10px; /* distance between character images */
+    width:auto;
+    height:auto;
+    cursor:pointer;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+#image1:hover img {
+    /* fade/opacity amount of other images when ONE image is hovered */
+    opacity:0.8;
+     /* blur amount on other images when ONE image is hovered */
+     /* remember to make all numbers the same */
+    -webkit-filter:blur(8px);
+    -moz-filter:blur(8px);
+    -o-filter:blur(8px);
+    filter:blur(8px);
+}
+
+#image1:hover img:hover {
+    opacity:1;
+    -webkit-filter:blur(0px);
+    -moz-filter:blur(0px);
+    -o-filter:blur(0px);
+    filter:blur(0px);
+}
+
+/*-----------------------STATISTICS BARS-----------------------*/
+.statbar {
+    margin-left:6px;
+    height:8px;
+    width:100px;
+    background-color:#f4f4f4; /* statistics background color */
+    overflow:hidden;
+    border-radius:4px;
+    display:inline-block;
+}
+
+.statfill {
+    height:100%;
+    width:0%;
+    background-color:#d6d1d1; /* statistcs bar fill color */
+    border-radius:4px 0px 0px 4px;
+}
+
+/*-----------------------POPUP-----------------------*/
+.popup_block{
+    display:none;
+    background:#fff; /* popup box background color */
+    padding:20px;
+    float:left;
+    position:fixed;
+    top:50%;left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    font-family:karla;
+    font-size:11px;
+    text-transform:none;
+    letter-spacing:0px;
+    color:#aaa; /* popup box text color */
+}
+
+*html #fade {position: absolute;}
+*html .popup_block {position: absolute;}
+#fade {
+    display:none;
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:9999;
+    background:#fff; /* popup box overlay color */
+    opacity:0.4;  /* popup box overlay opacity */
+}
+
+.boximage {
+    opacity:1;
+}
+
+.boximage img {
+    float:left;
+    width:250px;
+    height:400px;
+    border-right:15px solid transparent;
+}
+
+.popup_block h1 {
+    font-family:montserrat;
+    font-size:14px;
+    color:#aaa; /* popup box title color */
+    text-transform:uppercase;
+    letter-spacing:2px;
+    padding-bottom:10px;
+    margin-top:0px;
+    margin-bottom:15px;
+    border-bottom:1px solid #f1f1f1; /* popup box title underline color */
+}
+
+.popup_block h2 {
+    font-family:montserrat;
+    font-size:11px;
+    text-transform:uppercase;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+
+.popup_block h2::first-letter {
+    color:#d6d1d1; /* popup box subtitle first letter color */
+}
+
+.popup_block table {
+    border-spacing:1px;
+    margin-left:-2px;
+}
+
+.popup_block stat {
+    font-family:montserrat;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+
+.popup_block .lnr {
+    padding:5px;
+    background-color:#d6d1d1; /* popup box "basic info" icon background color */
+    color:#fff; /* popup box "basic info" icon color */
+    margin-right:1px;
+    margin-top:1.5px;
+    margin-bottom:1.5px;
+}
+
+.content {
+    max-height:115px; /* maximum height of "about biography" text */
+    overflow:auto; /* this line enables the scrollbar in your text */
+    text-align:justify;
+    padding-right:10px;
+}
+
+.popup_block b {
+   color:#d6d1d1; /* popup box bold text color */
+}
+
+.closewin {
+    float:right;
+    margin-top:-15px;
+    margin-right:-25px;
+    cursor:pointer;
+}
+
+.closewin .lnr {
+    font-size:9px;
+    padding:6px 16px;
+    background-color:#f3f1f1; /* popup box close button background color */
+    color:#5f5e5c; /* popup box close button color */
+}
+
+#popcorn{position:fixed;display:block;bottom:90px;right:7px;z-index:7999;}
+#popcorn a{font-family:times;font-size:8px;text-transform:uppercase;color:#cecece;background-color:#111;letter-spacing:1.5px;padding:5px 7px;margin-left:5px;margin-right:5px;}
+
+/*-----------------------CUSTOM LINKS-----------------------*/
+#customlinks {
+    position:fixed;
+    bottom:0;left:0;
+    margin-bottom:96px;
+    margin-left:10px;
+    width:50px;
+    height:auto;
+    z-index:3000;
+}
+
+#customlinks .lnr {
+    font-size:12px;
+    padding:9px 8px 10px 10px;
+    background-color:#1f182a; /* custom links background color */
+    color:#eee; /* custom links color */
+    display:inline-block;
+    margin-top:3px;
+    margin-bottom:3px;
+    border-radius:100%;
+}
+
+#customlinks .lnr:hover {
+    background-color:#dcd4cf;  /* custom links hover background color */
+    color:#424446; /* custom links hover color */
+}
+
+
+/*-----------------------CREDIT. DO NOT REMOVE-----------------------*/
+#c {
+    position:fixed;
+    display:block;
+    bottom:90px;
+    right:7px;
+    z-index:8000;
+}
+ 
+#c a {
+    font-family:montserrat;
+    font-size:8px;
+    text-transform:uppercase;
+    color:#cecece; /* credit color */
+    background-color:#111; /* credit background color */
+    letter-spacing:1.5px;
+    padding:5px 7px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+/*-----------------------FADE-IN EFFECTS-----------------------*/
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+opacity:0;
+-webkit-animation:fadeIn ease-in 1;
+-moz-animation:fadeIn ease-in 1;
+animation:fadeIn ease-in 1;
+-webkit-animation-fill-mode:forwards;
+-moz-animation-fill-mode:forwards;
+animation-fill-mode:forwards;
+-webkit-animation-duration:1s;
+-moz-animation-duration:1s; animation-duration:1s; }
+ 
+.fade-in.one { -webkit-animation-delay: 1.3s; -moz-animation-delay: 1.3s; animation-delay: 1.3s; }
+
+.fade-in.two { -webkit-animation-delay: 1.5s; -moz-animation-delay: 1.5s; animation-delay: 1.5s; }
+
+.fade-in.three { -webkit-animation-delay: 2s; -moz-animation-delay: 2s; animation-delay: 2s; }
+ 
+{CustomCSS}
+ 
+</style>
+ 
+</head>
+ 
+<body>
+
+<div id="popcorn"><a href="https://tmblr.co/mj4GEdc9g4ccXuX_vDDHmZA" title="ɢʟᴇɴᴛʜᴇᴍᴇꜱ">©</a></div>
+
+<div id="maintitle" class="box fade-in three">
+<!-----MAIN TITLE TEXT----->
+Helping Those
+<br>
+Who Cannot Help
+<br>
+Themselves
+</div>
+
+<div id="botbar">
+<div id="botmid" class="box fade-in two">
+    <!-----BOTTOM TITLE TEXT----->
+    <div class="bottext">Falks University for the Training of Gifted Heroes</div>
+</div>
+</div>
+
+
+<div id="image1" class="box fade-in one">
+
+<!-----TO ADD ANOTHER CHARACTER, COPY & PASTE THE LINES BELOW----->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Vonda" rel="box11" class="poplight"><img src="https://64.media.tumblr.com/0ed0ec4bc1b27a1b2e319871ad3b2ce2/3f2739f5e9fcd7f5-1e/s640x960/19f0853e33ec75dad1ce580339f2c18f14c3a0e1.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Kruze" rel="box2" class="poplight"><img src="https://64.media.tumblr.com/79ff385e36f6ca9368631c60c1fc769e/423d83a5a54a32cc-9a/s640x960/66a9416bc41bd56a0338a256ee340c25698a865c.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Elora" rel="box8" class="poplight"><img src="https://64.media.tumblr.com/9421e89890de5e71220fd477cc48ae83/3f2739f5e9fcd7f5-08/s640x960/b3a189caa7c61029a2d3c2019d92f5bbf94f772e.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Briony" rel="box9" class="poplight"><img src="https://convertingcolors.com/gradient-EEECEC.svg" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Rocco" rel="box3" class="poplight"><img src="https://64.media.tumblr.com/5be66e704ddffeb3ee56dec946588b7f/423d83a5a54a32cc-96/s640x960/aff302d51b6bbc6a4a861f82e406858b53a103a5.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Vera" rel="box5" class="poplight"><img src="https://64.media.tumblr.com/79a88b130c2b9ca96342c016d75eb5c8/6a739b4b5132638d-ed/s540x810/bcd78f30c4030e72aacd0bd8c4e86a453db84078.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Onie" rel="box15" class="poplight"><img src="https://64.media.tumblr.com/c86286b4103f178f0ecff2b9c69f7b44/423d83a5a54a32cc-ad/s640x960/e2e09aff1c991d195653da19ae6bbadb9c207a8a.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Leona" rel="box4" class="poplight"><img src="https://64.media.tumblr.com/742493ecd1167564f78ee7ebe7a1790e/3f2739f5e9fcd7f5-7d/s640x960/459aaf76cbcce8521b223522a9af16f854e55834.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Zahir" rel="box7" class="poplight"><img src="https://64.media.tumblr.com/04c3f3f9d090fdefe768c2d3ce562b06/3f2739f5e9fcd7f5-90/s640x960/711aeac7dd5527b1c93d722839eb2af831e9b772.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Dimas" rel="box13" class="poplight"><img src="https://64.media.tumblr.com/fa31fa589ab058c0bcfc66dc3f484e48/423d83a5a54a32cc-af/s640x960/9f71126d757d96abe880be0d1bd7faca97a81f88.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Junius" rel="box10" class="poplight"><img src="https://64.media.tumblr.com/036d39c7c235a4a81289afb8ee02c329/3f2739f5e9fcd7f5-f6/s640x960/552325e99556d700f7f008dfa59a2b4d0ce14674.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Hali" rel="box6" class="poplight"><img src="https://64.media.tumblr.com/424eb9ed0ff167c945435d34b49e7e5e/1a97599209d3836a-81/s540x810/3d48a8f0abb28dc6386f555a6f9093771914256e.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Sofia" rel="box1" class="poplight"><img src="https://64.media.tumblr.com/8d6e832ee24b58425bf06243936876e8/3f2739f5e9fcd7f5-48/s640x960/3fe359356bb1f3723d8151836ee17c833ad97174.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Ibrahim" rel="box14" class="poplight"><img src="https://64.media.tumblr.com/b2f65422a1eec4143a898fcda70f6aa6/423d83a5a54a32cc-b0/s640x960/feb66a0f67cc901b967671c85f54a34d4d9680b0.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Jerilyn" rel="box16" class="poplight"><img src="https://64.media.tumblr.com/30e9ff1c1277cfcff944cb5c5680e91d/423d83a5a54a32cc-9c/s640x960/2646ac1e5ec3b6de5a8547995198188a9f143041.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----*START COPY*----->
+<a href="#?w=475" title="Larue" rel="box12" class="poplight"><img src="https://64.media.tumblr.com/1b6a30fd26bfb060adbe985d6b296772/423d83a5a54a32cc-93/s640x960/2bd236db3615fccf4d0aa11cf6ae331908e889fb.png" style="width:210px"></a>
+<!-----*END COPY*---->
+
+<!-----"first character" IS THE TOOLTIP TEXT THAT SHOWS UP WHEN YOU HOVER THE CHARACTER IMAGE---->
+
+<!-----REPLACE THE IMAGE URL WITH YOUR OWN IMAGE URLS---->
+
+<!-----YOU CAN CHANGE THE WIDTHS OF EACH IMAGE BY CHANGING "120px"---->
+
+<!-----REMEMBER TO CHANGE THE NUMBER IN "box1" TO THE CORRECT NUMBER OF YOUR CHARACTER ORDER. FOR EXAMPLE, IF YOU HAVE 4 CHARACTERS, CHANGE THE 4TH CHARACTER TO "box4"----->
+
+</div>
+
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box1" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Sofia Smith</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://i.pinimg.com/originals/27/48/d5/2748d59c4988b0679c6fe9c8a8912e5a.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> None
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Gemini
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> RISE by Glitch Mob, Mako, and The World Alive
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:85%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor Notes</h2>
+
+<div class="content">
+Smith is strong, clever, and driven. Her amibitious nature is worthy of both admiration and fear. However, she's also obstinate, impulsive, and has no sense of her own limits - not to mention her skills of observation border on stalkerish, but seem to be selective based on her own bias. That's not even touching her ridiculously dysfunctional enmity with Cinege. Still, she's not an entirely hopeless case; let's just say I'm glad Quirke is the one mentoring her, not me.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box2" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Kyran 'Kruze' Cinege</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://66.media.tumblr.com/f982da2dd092c7d0e989e37281e1ed6c/5e5e04e3d92e7bea-d0/s250x400/5d0bee2fac7e3c30c4556ede257e1ef1e9f952ec.png"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Explosions
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Aries
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Dangerous by Shinedown
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:80%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:45%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor Notes</h2>
+
+<div class="content">
+On the surface, there's very little good to say about Cinege. He's callous, rude, and flagrantly disrespectful - plus he's got a mouth that would make a sailor blush. His relatioship with Smith especially sometimes borders on downrght cruel, although she clearly gives as much as she gets. However, if you bother to look a little deeper, there's some potential. He's intelligent and strategic, and is capable of being charming on those rare occasions that he wants to be. Plus he's protective, albeit in a nontraditional way. Still, I won't hesitate to bill him for all of the painkillers I'll need to take these next four years - I just know the headaches will be his fault.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box3" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Rocco Ajay Gupta</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://64.media.tumblr.com/73dd3e219b5f132e699985163eb5bb99/7e2693f8af078f08-7c/s250x400/74e825359b1833d56a026a0786b5f3c89f09a393.png"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Brain Wave Manipulation
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Libra
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> How Did You Love by Shinedown
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:80%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes
+</h2>
+
+<div class="content">
+For someone who got in based on recommendation, Gupta is remarkably average. He's strong and eager to make friends, and his Gift is intriguing. But he underutilizes it, as if he doesn't have the confidence to experiment with it, and his outgoing nature hides a baffling lack of understanding how to interact with his peers. His education record is also pretty spotty from moving around a lot, although he's good at catching up. But something tells me there's more than meets the eye to this kid. I think he'll surprise us all.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box4" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Leona Kita</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://i.pinimg.com/originals/12/be/33/12be338a7cf86679428a38616e33458c.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Intangibility
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Leo
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Live Young Die Free by FLETCHER
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:45%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+As much as it pains me to admit, there's simply not much to say about Kita. She's friendly, bright - bright enough to understand her Gift quite well from what I hear, despite it being rooted in quantum physics - and is rarely seen anywhere except by Smith's side. She struggles to get her assignments done, but doesn't seem to have the same problems as Sparks. In fact, I would suspect her to be totally unremarkable, if it wasn't for the fact that our school counselor has rather latched onto her. That, and her parents never seem to be around - not even as emergency contacts. I'm tempted to think she has some kind of dark secret, except people with dark secrets don't don't talk this much.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box5" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Vera [REDACTED AT STUDENT'S REQUEST]</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://mediaslide-europe.storage.googleapis.com/mandp/pictures/2583/15412/large-1570185300-b54f5bd5edda480e6ab9d4e4110ed0c5.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Fire Control
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Virgo
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Can You Keep A Secret? by Ellise
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:85%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:80%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:40%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+The student, henceforth referred to as 'Vera' given her request that her surname be used as little as possible, concerns me. She is incredibly driven - she could give Smith a run for her money - and entirely single-minded. She shows no interest in her peers; I suspect the only reason Gupta is allowed around her is because he had time and proximity to wear her down, before the school year started. It's her undeniable skill that troubles me, though. No child should have that level of endurance. I've never met her father, but I've heard the stories. I can only hope that the other students will be able to find something under all of the defenses she's put up.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box12" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Larue Von Brandt</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://66.media.tumblr.com/91d0f77c5f9b3d52277d7b459b71d89e/tumblr_oh5kdxjxOX1t75gkxo1_r1_250.png"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Vertigo
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Sagittarius
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Teen Idle by MARINA
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:45%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+Years of soccer has prepared Von Brandt surprisingly well for her time at Falks. While her combat skills are about as good as one would expect, she has the endurance and drive to get better. She's also highly competitive and generally rough-and-tumble. While this means she clashes with some of her more laidback, gentler classmates, she has earned herself just as many allies among her more serious peers. Her brash nature has not won her points with Vera, but it appears to have impressed Cinege. You win some and you lose some, I suppose.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box13" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Dimas Amaro Felipe Mun de la Cruz</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://i.pinimg.com/originals/0b/c5/04/0bc504c007f0b298d68d1c0d901e3c45.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Light Solidification
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Birthday:</b> Scorpio
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Trying by Cavetown
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+According to his disciplinary records, Mun has taken issue with injustice in the world at a very young age. While he clearly only went after bullies, he's also quick to judge and sometimes acts when he should have waited. Despite his reliance on his intuition, however, he's holding a lot of doubts. It's obvious that something specific is troubling him. It doesn't detract from his performance, which makes sense as I suspect this has been going on for some time, but the sooner he figures it out, the better.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box14" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Ibrahim Sparks</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://66.media.tumblr.com/4602157ae63b28d9012e57e3c78661f8/tumblr_ou9sdz4aS51viu2p0o5_250.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Speed
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Aquarius
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> House of Gold by Twenty One Pilots
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:80%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:45%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+When I first heard about Sparks after the stunt he pulled two years ago, I had a lot of expectations, and not all of them were positive. I did not, however, expect the person he turned out to be. By all accounts, he's a pretty normal kid - reckless and loud and immature, but compassionate and popular with his peers. He can't get his work in on time to save his ass, but given his ADHD I'm willing to lend him some leniency that won't be extended to others. If not for the prominent scar on his face, I would believe that we somehow brought in a different Ibrahim Sparks. His classmates, I am certain, don't suspect a thing.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box15" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Onie Hirsch</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://static.wixstatic.com/media/08707c_da87675db50a49e0990745c86e5bfc89~mv2_d_1567_2362_s_2.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Truth Compulsion
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Pisces
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> quiet motions by mxmtoon
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+Hirsch is quiet and easily missed, but also curious and tireless in her search for knowledge. Sometimes her push for answers make people uncomfortable, but her classmates rarely seem to hold it against her. Perhaps if she can overcome her anxiety, she'll be able to really make something of herself. For now, I'll settle for getting her to stop taking the fall for others' mischief. Once I can believe her when she says something is her fault again, maybe I'll be able to rely on her as a source of common sense in an otherwise chaotic crowd.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box16" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Jerilyn Urbina</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://i.pinimg.com/originals/a0/50/16/a050169313a017e5923059acc1ca94f9.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Mitosis
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Capricorn
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> My Kind by Alessia Cara
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+Urbina is the kind of student who you forget exists until she speaks up - and when she does, it tends to be to say something that knocks you off your feet. I'm sure there's plenty under the quiet veneer, but her struggle to stay together - both metaphorically and literally, given the nature of her Gift - means that it'll take time for her to stop being so careful in her presentation. Right now, I mostly just want to know what in the world has driven her to hang with Cinege's crowd - even Hirsch is more willing to partake in their chaos than Urbina. For now, though, she's a sorely needed and consistent source of calm and quiet in the classroom.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box6" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Hali Kau'i Rana</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://www.thegardenisland.com/wp-content/uploads/2019/05/web1_SienaAgudong2.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Neurotoxicity
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Scorpio
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Hawaii (Stay Awake) by Waterparks
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:80%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:45%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+Given what happened when her Gift manifested, it's not surprising that Rana is mature and slow to emotional outbursts. But it is surprising that she opened up so quickly to her peers - I would've expected her to be more on the Vera side of the spectrum. It's just as well, though. She's the rational, honest balancing act that her more flighty classmates need. Mostly, I'm just relieved that her parents managed to develop a decent antidote to her neurotoxin; training is difficult enough without worrying that one of the students is going to put one of her peers into a coma.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box7" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Zahir Mayer</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://iv1.lisimg.com/image/20553843/740full-lior-harel.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Enhancement
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Cancer
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> So Will I by Ben Platt
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:80%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:45%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+Mayer is a well-off, highly-intelligent, natural-born leader. He's also socially clumsy at best and his tendency to take control of situations doesn't always sit well with his peers. More troubling is his strict adherence to the rules; I can't believe I'm saying this, but he'd do well to take a page out of Smith's book and learn to bend a rule or two occasionally. Hopefully he'd have a better understanding of the appropriate times to do so. All I know is that if he keeps trying to keep his classmates in control, he may go gray before I do.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box8" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Elora Dolores Jaime Cristina Elena Dreesen Treviño-Zapata</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://az617363.vo.msecnd.net/imgmodels/models/MD50000688/eddienew-raerodriguez-31e8f3bd97b90bbd1a7ecea8032fa9b04_thumb.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Clay Manipulation
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Cancer
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Count On Me by Bruno Mars
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:65%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+Of all the students in this class, Dreseen has her act together the most. She's taken to monitoring her peers' emotional states and intervening when they become agitated. Whereas Mayer is a proactive leader who's quick to take the reigns, Dreseen is generally happy to wait until someone hands them over - a task her classmates are often all-too-willing to fulfill. However, she has a generally sunny, optimistic outlook on things. I dread the day and pity the fools who are there when the world fails to live up to her expectations.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box10" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Junius Ochoa</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://images.huffingtonpost.com/2016-10-14-1476475829-3449521-eye8-thumb.JPG"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Aging Acceleration
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Pisces
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Comfort Crowd by Conan Gray
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+Much like Rana, Ochoa also grew up with a rather dangerous Gift. Unlike Rana, there is no cure for his Gift. Not being able to touch people - even having to be careful about the way he touches objects - has left him isolated from his peers. Training has also been difficult, mostly theoretical as he refuses to risk it. While I believe our nurse assistant's Gift would be able to reverse the effect if nearby, nobody has been willing to volunteer. Not surprising. He's an observant and clever kid, but unless we can figure out how to control his Gift soon, Ochoa is rather stuck.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box11" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Vonda Bianchi</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://66.media.tumblr.com/c526ee11a0ea9e947aa12b3282072328/tumblr_p9rfv68kEn1wrr1hlo5_250.jpg"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Self-Levitation
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Aries
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Florets by Grace Vanderwaal
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:80%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:45%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Notes</h2>
+
+<div class="content">
+Bianchi's got her head up in the clouds, and not just literally. She spends all of class daydreaming and giggling, to herself or anyone around her, so it's always a surprise when she gets her homework in and it's actually decently done. Still, I suspect if she could just spend all of her time floating through the sky, she would. She's compassionate and sweet, but has no clear motivation to be a Hero, not like most of her peers do. If she could just find her drive, though, I believe she would be quite the force to behold.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+<!-----*START BIOGRAPHY BOX*----->
+<div id="box9" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!-----POPUPBOX TITLE----->
+<h1>Briony Farah El-Hashem</h1>
+
+<!-----IMAGE INSIDE POPUP BOX----->
+<div class="boximage"><img src="https://images.unsplash.com/photo-1587356315079-3178211b3166?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"></div>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>basic info</h2>
+
+<span class="lnr lnr-gift"></span>
+<b>Gift:</b> Invisibility
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Sign:</b> Gemini
+<p>
+
+<span class="lnr lnr-music-note"></span>
+<b>Song:</b> Am I Pretty? by The Maine
+<p>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>statistics</h2>
+
+<!-----POPUP BOX STATISTICS----->
+<table><tbody>
+      <tr>
+        <!-----STATSTICS 1 NAME----->
+        <td><stat>Strength</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 2 NAME----->
+        <td><stat>Dexterity</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:70%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 3 NAME----->
+        <td><stat>Constitution</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:50%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 4 NAME----->
+        <td><stat>Wisdom</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:55%"></div></div>
+        </td>
+      </tr>
+        <!-----STATSTICS 5 NAME----->
+        <td><stat>Charisma</stat></td>
+        
+        <td>
+        <div class="statbar">
+        <!-----STATISTICS BAR WIDTH. PERCENTAGE----->
+        <div class="statfill" style="width:75%"></div></div>
+        </td>
+      </tr>
+</tbody></table>
+
+<!-----POPUP BOX SUBTITLE----->
+<h2>Advisor's Note</h2>
+
+<div class="content">
+I remember being a teenager and wishing that my Gift was invisibility. I was desperate for people to leave me alone, stop asking me questions; a lot of days I still do. El-Hashem appears blissfully unaware of how lucky she is. As the holder of all interesting pieces of gossip, she thrives on the attention that her classmates are always willing to give her. She's also bright enough to be aware that it is incredibly unlikely that her Gift is static. I suspect that whatever is keeping her invisible has a psychological root rather than a Gift one.
+</div>
+</div>
+<!-----*END BIOGRAPHY BOX*----->
+
+
+<!-----CUSTOM LINKS----->
+<div id="customlinks" class="box fade-in two">
+    <a href="https://keen2meecha.tumblr.com" title="home"><span class="lnr lnr-power-switch"></span></a>
+    <a href="https://keen2meecha.tumblr.com/ask" title="contact"><span class="lnr lnr-phone"></span></a>
+    <a href="https://keen2meecha.tumblr.com/archive/tagged/gifted" title="archive"><span class="lnr lnr-map"></span></a>
+    <!-----YOUR CUSTOM LINKS----->
+    <!-----FEEL FREE TO CHANGE THE ICONS----->
+    <!-----"sample link" IS THE TOOLTIP TEXT ON HOVER----->
+    <a href="https://picrew.me/image_maker/332600" title="Picrew Used"><span class="lnr lnr-link"></span></a>
+    <a href="https://keen2meecha.tumblr.com/post/613065918133747712/introducing-sofia-and-her-ducklings-as-theyre-so" title="Sofia's Ducklings"><span class="lnr lnr-list"></span></a>
+    <a href="https://keen2meecha.tumblr.com/post/613066913710489600/introducing-kruze-and-his-ducklings-in-order" title="Kruze's Ducklings"><span class="lnr lnr-list"></span></a>
+</div>
+
+
+<!-----CREDIT. DO NOT REMOVE----->
+<div id="c">
+<a href="//glenthemes.tumblr.com" title="page by glenthemes">credit</a>
+</div>
+ 
+</body>
+ 
+</div>
+</html>
